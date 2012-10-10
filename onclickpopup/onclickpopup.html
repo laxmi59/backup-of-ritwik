@@ -1,0 +1,26 @@
+<link href="jquery-ui.css" rel="stylesheet" type="text/css"/>
+<script src="jquery.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
+  <script>
+  $(document).ready(function() {
+    //$("#dialog").dialog();
+	
+	 $("#dialoganchor").click(function(){
+	 	 $("#dialog").dialog();
+	 });
+  });
+  
+   
+ 
+  </script>
+<style type="text/css">
+
+</style>
+
+
+  
+<div id="dialog" title="Dialog Title" style="height:200px; width:500px; display:none"><?php include "http://www.casinoaffiliateprograms.com/terms-conditions.php"?></div>
+
+<div id="dialogcontent" title="Dialog Title"><a id="dialoganchor" href="javascript:void(0)">click here</a></div>
+
