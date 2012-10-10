@@ -1,0 +1,39 @@
+/* CSS Document */
+.style1 {
+	color: #FFFFFF;
+	font-size: 14px;
+	font-family: Tahoma;
+	font-weight: bold;
+}
+.style3 {font-family: Arial; font-size: 12px;
+color:#336797; }
+#searchForm {font-size:11px; font-family: Arial, Helvetica,sans-serif;display: block;width: 400px;}
+#searchForm input,#searchForm select {background: white;padding: 1px 2px;font-size:11px; font-family: Arial, Helvetica,sans-serif;color: black;border:black 1px solid;} /* input box inside font color and outside border color */
+#searchForm div#hot-search-params {float:left;}
+#searchForm div#hot-search-params table {font-size: 11px;}
+#searchForm form,#searchForm img {margin: 0;padding:0;border:0;}
+#searchForm a:link,#searchForm a:active,#searchForm a:visited,#searchForm a:hover {}
+.clearFix:after{content: ".";display: block;height: 0;clear: both;visibility: hidden;}
+.clearFix {display: inline-block;}
+* html .clearFix {height: 1%;}
+.clearFix {display: block;}
+#searchForm .outsideBorder {background:#B5D6F9;padding: 10px;}
+#searchForm .insideBorder {background: white;  padding: 5px;margin: 0 0 8px 0;}
+#searchForm .insideBorder table {float:left;}
+#searchForm table#nav {margin:0;padding:0;border:0;border-collapse:collapse;}
+#searchForm table#nav td {background: white; border-top:gray 1px solid;border-left:gray 1px solid;border-right:gray 1px solid;padding: 5px 3px; margin: 5px 0 0 0;text-align: center;font-size: 11px;}
+#searchForm table#nav td.selected {background: gray;padding: 5px 10px; margin: 0 3px 0 0; color: white;font-size: 11px;} /*change bg color*/
+#searchForm table#nav td a {color:black;text-decoration:none;}
+#searchForm table#nav td a:hover {text-decoration:underline;}
+#searchForm table {margin: 0;padding: 0;border-collapse: collapse;width: 98%;}
+#searchForm table div#hot-search-params table td {padding:0 7px 2px 0;font-size:11px;}
+#searchForm fieldset {margin: 0;padding: 0;border: 0;}
+#searchForm fieldset.date {float:left;padding-right: 10px;}
+#searchForm fieldset.date img {margin-top: 3px;}
+#searchForm p.masterHEADER { color:black; font-weight: bold; font-size: 12px;margin:0 0 10px 0;padding;text-align:left;}
+#searchForm .button {color: white;border: black 1px solid;cursor:hand;background:green;text-decoration:none;padding: 3px 5px;margin: 0;float: right;} /* search button text, border and background*/
+#searchForm div.cityList {}
+#searchForm div.cityList ul {float: left;width: 30%;margin: 0;padding:0}
+#searchForm div.cityList ul li {list-style-type:none;margin:0;padding:0}
+#searchForm div.cityList ul li.cityBold {font-weight:bold;}
+#searchForm div.cityList ul li input, #searchform input#radCityText {border: none;}

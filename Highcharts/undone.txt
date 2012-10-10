@@ -1,0 +1,3 @@
+Line and scatter charts
+	Scatter plot
+Column with rotated labels

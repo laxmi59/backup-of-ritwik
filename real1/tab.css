@@ -1,0 +1,70 @@
+/* CSS Document */
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+.shadetabs{
+/*padding: 3px 0;*/
+margin-left: 0;
+/*margin-top: 1px;*/
+margin-bottom: 0;
+font: bold 12px Verdana;
+list-style-type: none;
+text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+.shadetabs li{
+display: inline;
+margin: 0;
+}
+
+.shadetabs li a{
+text-decoration: none;
+position: relative;
+/*z-index: 1;*/
+/*padding: 3px 7px;*/
+/*margin-right: 3px;*/
+margin:0;
+padding-top:0;
+/*border: 1px solid #778;*/
+color: #9CBEEE;
+background: white url(shade.gif) top left repeat-x;
+}
+
+.shadetabs li a:visited{
+color: #9CBEEE;
+}
+
+.shadetabs li a:hover{
+text-decoration: underline;
+color: #9CBEEE;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+position: relative;
+top:2px;
+padding:0;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+/*background-image: url(shadeactive.gif);*/
+border-bottom-color: #9CBEEE;
+}
+
+.shadetabs li a.selected:hover{ /*selected main tab style */
+text-decoration: none;
+}
+
+.tabcontent{
+display:none;
+padding:0;
+}
+
+@media print {
+.tabcontent {
+display:block !important;
+}
+}
+
+/* ######### CSS for Inverted Modern Bricks II Tabs. Remove if not using ######### */
+
+
+

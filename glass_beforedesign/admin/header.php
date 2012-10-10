@@ -1,0 +1,22 @@
+<? session_start();?>
+<link href="../css/style1.css" type="text/css" rel="stylesheet" />
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0"  >
+<tr><td><h1 align="center"> Welcome &nbsp;<?=$_SESSION['admin_name']?></h1></td></tr>
+<tr><td>
+	<table width="100%" align="center" cellpadding="0" cellspacing="0">
+	<tr class="menu_back_color1" height="20" >
+		<td width="65">&nbsp;</td>
+		<td width="109" align="center"><a href="<?=ADM_HOME?>" class="whitelink"><strong>Home</strong></a></td>
+		<td width="126" align="center"><a href="<?=ADM_PRODUCTS."?act=show_cat_prod"?>" class="whitelink"><strong>Products</strong></a></td>
+		<td width="138" align="center"><a href="<?=ADM_SELLERS."?act=show_sellers&status=a"?>" class="whitelink"><strong>Wholesaler</strong></a></td>
+		<td width="108" align="center"><a href="<?=ADM_USERS."?status=a"?>" class="whitelink"><strong>Users</strong></a></td>
+		<td width="190" align="center"><a href="<?=ADM_HOME."?act=pass"?>" class="whitelink"><strong>Change Password</strong></a></td>
+   		<td width="115" ><a href="<?=ADM_LOGOUT?>" class="whitelink"><strong>Logout</strong></a></td>
+		<td width="122">&nbsp;</td>
+	</tr>
+	</table>
+</td></tr>
+</table>
+
+
+                 

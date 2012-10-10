@@ -1,0 +1,217 @@
+/* CSS Document */
+body{
+margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	
+}
+.bbg{
+	background-image:url(../images/b_bg.jpg);
+	width:188;
+	height:239;
+	background-repeat:repeat-x;
+	}	
+.sitewidth{width:980px;  background:#FFFFFF}
+.mainadmintab{ width:90%; background-color:#FFFFFF; height:570px; border:1px solid gray}
+.leftbar{width:24%; background:url(images/b2.jpg);}
+.leftbar_img{ background:url(../images/bg.jpg) repeat-x; height:34px;}
+.leftbar_img span{ color:#96011F; font-size:12px;  font-family: arial,helvetica,sans serif; font-weight:bold}
+.leftbar_img_bg{background:#F2F5F4;}
+.rightbar{width:76%;}
+.menu_item_bar{
+color:#FFFFFF;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+}
+
+.imgbdr{ border:1px solid black;}
+.page{
+height:375px;
+}
+a.a:link{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;}
+a.a:visited{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:bold;
+text-decoration:none;}
+a.a:hover{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:bold;
+text-decoration:underline;}
+a.whitelink:link{
+color:#FFFFFF;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;}
+a.whitelink:visited{
+color:#FFFFFF;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;}
+a.whitelink:hover{
+color:#FFFFFF;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:underline;}
+a.blacklink:link{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;}
+a.blacklink:visited{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;}
+a.blacklink:hover{
+color:#FF0000;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;}
+
+a.blacklink_header:link{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:underline;}
+a.blacklink_header:visited{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:underline;}
+a.blacklink_header:hover{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:underline;}
+a.blacklink_header:active{
+color:#666666;
+font-weight:normal;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+background-color:#CCFFFF;
+text-decoration:underline;}
+.abar{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:bold;
+}
+a.a1:link{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+text-decoration:none;
+font-weight:normal;}
+a.a1:visited{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:normal;
+text-decoration:none;}
+a.a1:hover{
+color:#0000FF;
+font-family: arial,helvetica,sans serif;
+font-size:11px;
+font-weight:normal;
+text-decoration:underline;}
+
+a.b:link{
+color:#0000FF;
+font-family:Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+text-decoration:none;}
+a.b:visited{
+color:#0000FF;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+text-decoration:none;}
+a.b:hover{
+color:#0000FF;
+font-family: Verdana, Arial, Helvetica, sans-serif;
+font-size:12px;
+text-decoration:underline;}
+a.c:link{
+color:#06095E;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;
+font-weight:bold;}
+a.c:visited{
+color:#06095E;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;
+font-weight:bold;}
+a.c:hover{
+color:#06095E;
+font-family: arial,helvetica,sans serif;
+font-size:12px;
+text-decoration:none;
+font-weight:bold;}
+.menu_back_color1{ background:#CCCCCC; border:1px solid #F2F5F4;}
+.trheight{height:20px;}
+.content_back_color{ background-color:#B5D6F9;}
+.linebreak{ height:8px; background:url(../images/psd1_15.jpg);}
+.linebreak1{ height:8px; }
+.trpad{padding-left:15px;}
+.txtstyle{font-family: arial,helvetica,sans serif; font-weight:bold; font-size:12px; color:#666666;}
+.txtstylebig{font-family: arial,helvetica,sans serif;; font-weight:bold; font-size:11px; line-height:20px; color:#666666;}
+.txtstylew{font-family: arial,helvetica,sans serif;; font-weight:bold; font-size:10px; color:#FFFFFF}
+.txtstyle1{ font-family: arial,helvetica,sans serif;
+font-size: 12px;
+line-height: 1.5;
+color:#000000;
+}
+		
+.txtstyle1big{ font-family: arial,helvetica,sans serif;
+font-size: 13px;
+line-height: 15px;
+color:#666666;
+}
+.txtstyle1w{ font-family:   arial,helvetica,sans serif;font-size: 14px;color:#FFFFFF;}
+.txtstyle2{font-family:  arial,helvetica,sans serif; font-size:10px;color:#666666;}
+.txtstyle2w{font-family:  arial,helvetica,sans serif; font-size:10px;color:#FFFFFF;}
+/*.heading1{font-family: arial,helvetica,sans serif; font-weight:bold; font-size:14px; color:#06095E; }
+.heading2{font-family: arial,helvetica,sans serif; font-weight:bold; font-size:12px; color:#FF0000; }*/
+.star {color: #FF0000; font-size:10px}
+.errstyle{color: #FF0000; font-size:13px;}
+.tdwidth{width:33%;}
+.tabborder{border:1px solid #E1E1E1};
+.sel{width:150px;}
+.btn{background-color:none; border:none; background:url(../images/go.png); width:42; height:33;}
+.mainhead{color:#96011F; font-size:24px; font-family:  arial,helvetica,sans serif;}
+.mainhead1{color:#96011F; font-size:12px;  font-family:  arial,helvetica,sans serif; font-weight:bold}
+#butt {
+	position: relative;
+	background:url(../images/psd1_19.jpg) no-repeat;
+	height: 25px;
+	left: 0;
+	top: 0;
+	width: 79px;
+	background-position:center center;
+	border:none;
+	}
+#navcontainer{ width:750px; height:25px;  }
+#navcontainer:after{display: block;line-height: 1px;font-size: 1px;clear: both;}
+ul#navlist{list-style: none;padding: 0;margin: 0 ;width: 100%;font-size:10px;font-weight:bold;}
+ul#navlist li{ display: block;float: left;margin: 0;padding: 0; }
+ul#navlist li a{display: block; font-size:11px;padding:5px; padding-top:0;height:15px;text-decoration:none; color:#FFFFFF; font-family: arial,helvetica,sans serif;}
+#navcontainer>ul#navlist li a { width: auto; }
+ul#navlist li#active a{color:#FFFFFF; background:url(../images/menu_hover.jpg); text-decoration:none; padding-top:1px;}
+ul#navlist li a:hover, ul#navlist li#active a:hover{color:#FFFFFF; background:url(../images/menu_hover.jpg); text-decoration:none; padding-top:1px;}
