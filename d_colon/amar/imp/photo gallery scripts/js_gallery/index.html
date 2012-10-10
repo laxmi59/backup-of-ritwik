@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<style type="text/css">
+/* general styling for this example */ 
+* { margin: 0; padding: 0; } 
+body { padding: 20px; } 
+/* begin gallery styling */ 
+#jgal { list-style: none; width:auto; } 
+#jgal li { opacity: .5; float: left; display: block; width: 70px; height: 70px; background-position: 100% 100%; cursor: pointer; border: 3px solid #fff; outline: 1px solid #ddd; margin-right: 14px; margin-bottom: 14px; } 
+#jgal li img { position: absolute; top: 300px; left: 220px; display: none; } 
+#jgal li.active img { display: block; } 
+#jgal li.active, #jgal li:hover { outline-color: #bbb; opacity: .99 /* safari bug */ } 
+
+/* styling without javascript */ 
+#gallery { list-style: none; display:block; } 
+#gallery li { float: left; margin: 0 10px 10px 0; } 
+
+<!--[if lt IE 8]> 
+<style media="screen,projection" type="text/css"> 
+#jgal li { filter: alpha(opacity=50); } 
+#jgal li.active, #jgal li:hover { filter: alpha(opacity=100); } 
+</style> 
+<![endif]--> 
+
+</style>
+<script type="text/javascript">
+var gal = { 
+init : function() { 
+if (!document.getElementById || !document.createElement || !document.appendChild) return false; 
+if (document.getElementById('gallery')) document.getElementById('gallery').id = 'jgal'; 
+var li = document.getElementById('jgal').getElementsByTagName('li'); 
+li[0].className = 'active'; 
+for (i=0; i<li.length; i++) { 
+li[i].style.backgroundImage = 'url(' + li[i].getElementsByTagName('img')[0].src + ')'; 
+li[i].title = li[i].getElementsByTagName('img')[0].alt; 
+gal.addEvent(li[i],'click',function() { 
+var im = document.getElementById('jgal').getElementsByTagName('li'); 
+for (j=0; j<im.length; j++) { 
+im[j].className = ''; 
+} 
+this.className = 'active'; 
+}); 
+} 
+}, 
+addEvent : function(obj, type, fn) { 
+if (obj.addEventListener) { 
+obj.addEventListener(type, fn, false); 
+} 
+else if (obj.attachEvent) { 
+obj["e"+type+fn] = fn; 
+obj[type+fn] = function() { obj["e"+type+fn]( window.event ); } 
+obj.attachEvent("on"+type, obj[type+fn]); 
+} 
+} 
+} 
+gal.addEvent(window,'load', function() { 
+gal.init(); 
+}); 
+
+</script>
+</head>
+
+<body>
+<ul id="gallery"> 
+<li><img src="img/P5090020.JPG" height="300" width="200" ></li> 
+<li><img src="img/Pic1.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic2.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic3.JPG" height="300" width="200" ></li> 
+<li><img src="img/Pic4.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic5.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic6.JPG" height="300" width="200" ></li> 
+<li><img src="img/Pic9.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic11.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic12.JPG" height="300" width="200" ></li> 
+<li><img src="img/Pic13.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic14.JPG" height="300" width="200"></li> 
+<li><img src="img/Pic15.JPG" height="300" width="200" ></li> 
+
+</ul> 
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+/* global */
+#cluetip {
+	font-size:90%;
+}
+
+#cluetip-close img {
+  border: 0;
+}
+#cluetip-title {
+  overflow: hidden;
+}
+#cluetip-title #cluetip-close {
+  float: right;
+  position: relative;
+}
+#cluetip-title #cluetip-close a {
+  color : #fff;
+  text-decoration : none;
+}
+.cluetip-arrows {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -11px;
+  height: 22px;
+  width: 11px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+#cluetip-extra {
+  display: none;
+}
+
+.cluetip-default {
+  background-color: #e1efba;
+  color: #000;
+}
+.cluetip-default #cluetip-outer {
+  position: relative;
+  background-color: #f2ffd7;
+  margin: 0;
+  border:1px solid #739b0b;
+}
+.cluetip-default #cluetip-title {
+  margin: 0 0 5px;
+  background-color: #96c730;
+  color : white;
+  padding: 5px;
+  font-size:1.1em;
+  font-weight: bold;
+  text-decoration:none;
+}
+.cluetip-default #cluetip-title a {
+  font-size: 0.95em;
+}  
+.cluetip-default #cluetip-inner {
+  padding-top:0;
+  padding:5px;
+  font-size:90%;
+}  
+.cluetip-default #cluetip-inner p, .cluetip-default #cluetip-inner h4 {
+	margin:0;
+	padding:0 5px;
+	margin-bottom:8px;
+}
+
+/* default arrows */
+
+.clue-right-default .cluetip-arrows {
+  background-image: url(../img/icons/darrowleft.gif);
+}
+.clue-left-default .cluetip-arrows {
+  background-image: url(../img/icons/darrowright.gif);
+  left: 100%;
+  margin-right: -11px;
+}
+.clue-top-default .cluetip-arrows, .clue-bottom-default .cluetip-arrows {
+  left: 50%;
+  margin-left: -11px;
+  height: 11px;
+  width: 22px;  
+}
+.clue-top-default .cluetip-arrows {
+	background-image: url(../img/icons/darrowdown.gif);
+	top: 100%;
+}  
+.clue-bottom-default .cluetip-arrows {
+  background-image: url(../img/icons/darrowup.gif);
+  top: -11px;
+}
+
+/* stupid IE6 HasLayout hack */
+.cluetip-rounded #cluetip-title, .cluetip-rounded #cluetip-inner {
+  zoom: 1;
+}

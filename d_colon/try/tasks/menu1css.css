@@ -1,0 +1,25 @@
+ul#nav1
+	{ margin-top:0; padding:1px 0; list-style:none; height:21px; /*border-top:1px solid #b9121b; border-bottom:1px solid #b9121b;*/}
+ul#nav1 li
+	{ margin:0; padding:0; display:block; float:left; position:relative; width:100px; }
+ul#nav1 li a:link,ul#nav1 li a:visited
+	{ padding:4px 0; display:block; text-align:center; text-decoration:none; width:148px; height:13px; }
+/*ul#nav1 li:hover a,ul#nav1 li a:hover,ul#nav1 li a:active
+	{ padding:4px 0; display:block; text-align:center; text-decoration:none; background-color:#0000FF; color:#ffffff; width:146px; height:13px; border-left:1px solid #ffffff; border-right:1px solid #ffffff; }*/
+ul#nav1 li ul.nav2
+	{ margin:0; padding:1px 1px 0; list-style:none; display:none; background:#ffffff; width:146px; position:absolute; top:21px; left:-1px; border:1px solid #b9121b; border-top:none; }
+ul#nav1 li:hover ul.nav2	{ display:block; }
+ul#nav1 li ul.nav2 li	{ width:146px; clear:left; width:146px; }
+ul#nav1 li ul.nav2 li a:link, 
+ul#nav1 li ul.nav2 li a:visited
+	{ clear:left; background-color:#3399FF; padding:4px 0; width:146px; border:none; border-bottom:1px solid #ffffff; position:relative; z-index:1000; }
+ul#nav1 li ul.nav2 li:hover a,
+ul#nav1 li ul.nav2 li a:active,
+/*ul#nav1 li ul.nav2 li a:hover*/
+	{ clear:left; background-color:#0000FF; padding:4px 0; width:146px; border:none; border-bottom:1px solid #ffffff; position:relative; z-index:1000; }
+ul#nav1 li ul.nav2 li a span
+	{ position:absolute; top:0; left:132px; font-size:12pt; color:#fe676f; }
+ul#nav1 li ul.nav2 li:hover a span,
+ul#nav1 li ul.nav2 li a:hover span
+	{ position:absolute; top:0; left:132px; font-size:12pt; color:#ffffff; }
+	

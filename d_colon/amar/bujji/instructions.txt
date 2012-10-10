@@ -1,0 +1,99 @@
+ 
+Here we need to create a xml file which has to be updated when a new topic is posted/edited/deleted
+as we have to change submit_post() and delete_post() functions	
+Files which we need to change to create an xml file:
+
+Note: when a new topic is posted ,latesttopics.xml is created in the  root directory and this xml 
+file is converted to html using the js_latesttopics.html which is in the root directory itself
+
+1.) includes/functions_post.php = In the function submit_post() 
+ 
+Repalce-
+		 if ($mode == 'newtopic')
+		{
+			$topic_id = $db->sql_nextid();
+		}
+
+With - 		if ($mode == 'newtopic' || $mode == 'editpost' )
+		{	
+			
+		$rs = "SELECT one.topic_id,one.topic_title, one.topic_poster, one.topic_time, one.forum_id, two.username , 					                    three.forum_name  from " . TOPICS_TABLE . " one ," .USERS_TABLE ." two, ".FORUMS_TABLE." three
+		 where one.forum_id = three.forum_id and one.topic_poster = two.user_id  order by topic_time desc limit 10";
+		  $at_result = $db->sql_query($rs);
+		  if(!$at_result)
+	{
+		die("Failed obtaining topics list ".mysql_error());
+	}
+		else {
+		$at_data = $db->sql_fetchrowset($at_result);
+		// setting content-type to XML
+		//header("Content-Type: text/xml");
+			
+	$output = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?><LatestTopics>";
+	for ($i = 0; $i < sizeof($at_data); $i++)
+	 {
+	// XML Output loop
+	$output .= " <Topic>
+	  <TopicID>".$at_data[$i]['topic_id']."</TopicID>
+	  <TopicTitle>".$at_data[$i]['topic_title']."</TopicTitle> 
+	  <Author>".$at_data[$i]['username']."</Author>
+	  <Category>".$at_data[$i]['forum_name']."</Category>
+	   </Topic>";
+	}
+	// end of XML output loop
+	$output .= "</LatestTopics>";
+
+	$filename = "latesttopics.xml";
+	$fp = fopen( $filename, "w" ) or die("Couldn't open $filename");
+	fwrite( $fp, $output);
+	fclose( $fp );
+
+				
+	$topic_id = $db->sql_nextid();
+   }
+2.) includes/functions_post.php = In the function delete_post()
+
+we need to write the following code:
+
+if($mode == 'delete')
+	{
+	$rs = "SELECT one.topic_id,one.topic_title, one.topic_poster, one.topic_time, one.forum_id, two.username , 					                    three.forum_name  from " . TOPICS_TABLE . " one ," .USERS_TABLE ." two, ".FORUMS_TABLE." three
+					  where one.forum_id = three.forum_id and one.topic_poster = two.user_id  order by topic_time desc limit 10";
+					  $at_result = $db->sql_query($rs);
+					  if(!$at_result)
+						{
+							die("Failed obtaining topics list ".mysql_error());
+						}
+					else {
+					$at_data = $db->sql_fetchrowset($at_result);
+					// setting content-type to XML
+					//header("Content-Type: text/xml");
+				
+				$output = "<?xml version=\"1.0\" encoding=\"ISO-8859-1\" ?><LatestTopics>";
+					for ($i = 0; $i < sizeof($at_data); $i++)
+					 {
+				// XML Output loop
+				$output .= " <Topic>
+				  <TopicID>".$at_data[$i]['topic_id']."</TopicID>
+				  <TopicTitle>".$at_data[$i]['topic_title']."</TopicTitle> 
+				  <Author>".$at_data[$i]['username']."</Author>
+				  <Category>".$at_data[$i]['forum_name']."</Category>
+				   </Topic>";
+					}
+				// end of XML output loop
+					$output .= "</LatestTopics>";
+				}
+				$filename = "latesttopics.xml";
+				$fp = fopen( $filename, "w" ) or die("Couldn't open $filename");
+				fwrite( $fp, $output);
+				fclose( $fp );
+	}
+
+
+
+
+
+<Limit GET POST PUT>
+Order Allow,Deny
+Deny from All
+</Limit>

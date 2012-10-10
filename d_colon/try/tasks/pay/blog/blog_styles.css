@@ -1,0 +1,157 @@
+* { 
+	margin : 0; 
+	padding : 0;
+}
+body {
+	background : #67e5fe url(http://www.paydaycashtoday.co.uk/img/chrome/gradientBack.jpg) repeat-x;
+	font-family : Tahoma;
+	color : #000;
+	font-size : 75%;
+	line-height : 100%;
+}
+img {
+	border : 0;
+}
+p {
+	padding : 5px;
+	margin : 5px 0;
+	line-height : 130%;
+}
+a {
+	color : blue;
+}
+ul {
+	list-style-position : outside; 
+	list-style-image:url(http://www.paydaycashtoday.co.uk/img/chrome/bullet.gif);
+}
+li {
+	margin : 10px 0 10px 20px;
+	line-height:1.2em;
+}
+ol li {
+	list-style-type:lower-alpha;
+}
+h2, h3 {
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+}
+h2 {
+	padding : 8px 0;
+	border-bottom : 1px solid #EF781A;
+}
+h3 {
+	padding : 8px 0;
+	line-height:1.2em;
+}
+.smallerFont {
+	font-size : 95%;
+}
+.topLevel {
+	width : 950px;
+	margin : 0 auto;
+}
+.innerLevel {
+	padding : 10px 15px;
+}
+
+#wrap { 
+	width : 1030px;
+	background : transparent url(http://www.paydaycashtoday.co.uk/img/chrome/centerEdges.jpg) no-repeat;
+	margin : 0 auto;
+}
+#footer .innerLevel {
+	padding : 4px 30px;
+	text-align : right;
+}
+#blog_mast {
+	background : #195561;
+	height : 80px;
+	border-bottom : 5px solid #0e2f36;
+}
+#blog-title {
+	padding-top:20px;
+	font-family:Tahoma, Helvetica, sans-serif;
+	text-decoration:underline;
+}
+#description {
+	color: #666;
+	padding-top:23px;
+	height : 30px;
+	line-height:1.2em;
+}
+#blog-title, #description {
+	color : white;
+  padding-left : 20px;
+}
+#navigation {
+	padding-top : 18px;
+	padding-left : 10px;
+	color : white;
+	text-align:left;
+}
+#navigation a {
+	color : white;
+	font-weight : bold;
+	font-size : 80%;
+	margin : 0 5px;
+	text-decoration : none;
+}
+#navigation a:hover {
+	text-decoration : underline;
+}
+#content {
+	background : #fff url(http://www.paydaycashtoday.co.uk/img/chrome/blogColumnContentBack.gif) repeat-y;
+	border-bottom : 5px solid #0e2f36;
+	min-height: 390px;
+}
+#content .innerLevel {
+	padding-bottom : 12px;
+}
+#leftColumn {
+	width : 665px;
+	float : left;
+}
+.post {
+	margin-top : 20px;
+	border-bottom : 1px dotted #333;
+}
+.post-footer {
+	border-top : 1px dotted #ccc;
+}
+#rightColumn {
+	width : 250px;
+	float : left;
+}
+#rightColumn a {
+	line-height: 1.5em;
+}
+.innerColumn {
+	padding : 10px;
+}
+.clear {
+	clear : both;
+}
+#footer {
+	background : #123e47;
+	padding: 4px 0;
+	font-family : Arial, sans-serif;
+	font-size : 11px;
+	color : #c7d7e7;
+}
+#footer a {
+	color : #dcedff;
+}
+#footerEdge {
+	height : 30px;
+	background : url(http://www.paydaycashtoday.co.uk/img/chrome/bottomEdge.gif) no-repeat;
+}
+#social-bookmarking li {
+  list-style-type : none;
+  list-style-image : none;
+	margin : 2px;
+}
+#social-bookmarking a {
+	text-decoration : none;
+}
+#social-bookmarking img {
+	border : 0; padding-top : 2px;
+}

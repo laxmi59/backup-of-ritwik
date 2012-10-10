@@ -1,0 +1,1 @@
+RewriteRule ^/([0-9][0-9])/$ /product.php?pID=$1

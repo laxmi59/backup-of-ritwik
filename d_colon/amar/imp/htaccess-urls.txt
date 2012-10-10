@@ -1,0 +1,6 @@
+http://www.javascriptkit.com/howto/htaccess12.shtml 
+http://roshanbh.com.np/2008/02/hide-php-url-rewriting-htaccess.html http://www.learningmovabletype.com/a/000743what_is_htaccess/ 
+http://shop.mufti.co.uk/ 
+http://httpd.apache.org/docs/2.2/mod/mod_rewrite.html 
+http://corz.org/serv/tricks/htaccess2.php 
+http://www.yourhtmlsource.com/sitemanagement/urlrewriting.html http://feedthefridge.com/index.php/2008/06/html/creating-seo-friendly-urls-using-htaccess/ http://www.php-learn-it.com/tutorials/mod_rewrite_dynamic_urls_to_static_urls.html http://web-programming.suite101.com/article.cfm/url_rewriting_via_htaccess http://forums.digitalpoint.com/showthread.php?t=7584 http://www.askapache.com/phpbb/using-last-modified-etag-mod_expires-mod_headers-to-seo-phpbb.html

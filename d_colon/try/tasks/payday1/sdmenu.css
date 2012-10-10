@@ -1,0 +1,26 @@
+div.sdmenu {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	padding-bottom: 10px;
+}
+div.sdmenu div {
+		overflow: hidden;
+}
+
+div.sdmenu div.collapsed {
+	height: 25px;
+}
+div.sdmenu div span {
+	display: block;
+	padding: 5px 25px;
+	font-weight: bold;
+	color:#003366;
+	cursor: default;
+}
+div.sdmenu div a {
+	padding: 5px 10px;
+	display: block;
+	padding-left:5%;
+	/*border-bottom: 1px solid #ddd;*/
+}
+
