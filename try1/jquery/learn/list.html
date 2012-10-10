@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery_files/jquery.js"></script>
+<script type="text/javascript">
+$( init );
+function init() {
+ // Move the paragraph from #myDiv1 to #myDiv2
+  $('#myDiv2').append( $('#myDiv1>p') );
+}
+</script>
+</head>
+
+<body>
+<div id="list1">list1
+	<a href="#" id="list1_move_top">move top</a> 
+	<a href="#" id="list1_top">top</a> 
+	<a href="#" id="list1_bottom">bottom</a> 
+	<a href="#" id="list1_move_bottom">move bottom </a>
+</div>
+<div id="list2">list2
+    <a href="#" id="list2_move_top">move top</a> 
+	<a href="#" id="list2_top">top</a> 
+	<a href="#" id="list2_bottom">bottom</a> 
+	<a href="#" id="list2_move_bottom">move bottom </a>
+</div>
+<div id="list1">list3
+	<a href="#" id="list3_move_top">move top</a> 
+	<a href="#" id="list3_top">top</a> 
+	<a href="#" id="list3_bottom">bottom</a> 
+	<a href="#" id="list3_move_bottom">move bottom </a>
+</div>
+<div id="list1">list4
+	<a href="#" id="list4_move_top">move top</a> 
+	<a href="#" id="list4_top">top</a> 
+	<a href="#" id="list4_bottom">bottom</a> 
+	<a href="#" id="list4_move_bottom">move bottom </a>
+</div>
+</body>
+</html>

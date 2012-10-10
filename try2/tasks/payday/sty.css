@@ -1,0 +1,84 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #303030;
+	margin-left: 0px;
+
+	margin-top: 0px;
+
+	margin-right: 0px;
+
+	margin-bottom: 0px;
+
+	background-color: #002e3c;
+	}
+
+.barbg{
+	width: 27px;
+	height: 47px;
+	background: url(images/m2.jpg) repeat-x; 
+	
+	
+	
+}
+
+.mainbar{
+	width: 27px;
+	height: 212px;
+	background:url(images/mm2.jpg) repeat-x; 
+		
+	
+}
+
+.more{
+    font-family: Arial, Helvetica, sans-serif ;
+	font-size: 12px;
+	color: #003366;
+	text-decoration: none;
+	font-weight:bold;
+}
+.more: hover{
+     font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CC3300;
+	text-decoration: none;
+	font-weight:bold;
+}
+.texttt{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #303030;
+	text-decoration:none;
+	font-style:italic;
+	padding:10px;
+	
+}
+.linkkk{
+    font-family: Arial, Helvetica, sans-serif ;
+	font-size: 12px;
+	color: #003366;
+	text-decoration:underline;
+	font-weight:bold;
+}
+.linkkk: hover{
+     font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CC3300;
+	text-decoration:underline;
+	font-weight:bold;
+}
+
+.side{
+     font-family: Arial, Helvetica, sans-serif;
+	font-size:15px;
+	color:#0fbfae;
+	text-decoration:underline;
+	font-weight:bold;
+}
+.sidelink{
+    font-family: Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#ED5120;
+	font-weight:bold;
+	text-decoration:none;
+}

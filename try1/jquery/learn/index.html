@@ -1,0 +1,26 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Untitled Document</title>
+<script type="text/javascript" src="jquery_files/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#butt').click(function(){
+		$('#div1').attr("class","xyz");
+	});
+});
+</script>
+<style type="text/css">
+.abc{color:#0000FF; font-style:italic;}
+.xyz{color:#FF0000;}
+</style>
+</head>
+
+<body>
+<div id="div1" class="abc">test</div>
+<div id="div2" class="abc">test</div>
+<div id="div3" class="abc">test</div>
+<input type="button" id="butt" value="click" />
+</body>
+</html>

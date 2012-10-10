@@ -1,0 +1,40 @@
+.container{ width:98%;height:900; padding-left:2%; }
+.container1{ width:943px;height:816; background:#E2E2E2;}
+.footer{font-size: 11px; float:left; color: #7F6D60 }
+
+.left{float:left; width:200px;}
+.right{width:740px; float:right; vertical-align:top;  background:#EFEFEF }
+.left1{width:470px;float:left;}
+.right1{width:230px;float:right;  padding-left:25px; background:#E2E2E2; }
+.ul{list-style:none;text-align:right;font-size: 12px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold; text-decoration:none;}
+.link{text-decoration:none; font-size:13px; color: #7F6D60; font-family:Arial, Helvetica, sans-serif;}
+a:hover{color:#0000FF;}
+.style3 {
+font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: bold;
+	color: #FF0000;
+}
+.style5 {font-size: 14px; color: #7F6D60; font-weight: bold; font-family:Arial, Helvetica, sans-serif;}
+.style10 {color: #7F6D60; font-family:Arial, Helvetica, sans-serif;}
+
+.style6 {
+	 font-family:Arial, Helvetica, sans-serif;
+	font-style: italic;
+	font-size: 14px;color:#7F6D60;
+}
+.style8 {
+	/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+	font-size: 12px;
+	 font-family:Arial, Helvetica, sans-serif;
+	 color:#7F6D60;
+}
+div.sdmenu {font-size:13px; color: #7F6D60;padding-bottom: 10px; font-family:Arial, Helvetica, sans-serif;}
+div.sdmenu div {overflow: hidden;}
+div.sdmenu div.collapsed {height: 25px;}
+div.sdmenu div span {display: block;padding:5px 0px;cursor:pointer;}
+div.sdmenu div a {padding: 5px 10px;display: block;	padding-left:5%;	/*border-bottom: 1px solid #ddd;*/}
+.lefth{float:left; width:200px;}
+.righth{width:740px; float:right; vertical-align:top;background-color:#7F6D60; }

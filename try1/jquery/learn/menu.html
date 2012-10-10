@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript">
+
+	$(document).ready(function() {
+	
+		//Set the even row to different color
+		$('ul#menu li:even').addClass('even');
+		
+		//configure the animations
+		$('ul#menu li a').mouseover(function() {
+		
+			$(this).animate( { paddingLeft:"20px" }, { queue:false, duration:500 } );
+		}).mouseout(function() {
+			$(this).animate( { paddingLeft:"0" }, { queue:true, duration:500 } )
+		}).click(function() {
+			$(this).animate( { fontSize:"20px" }, { queue:false, duration:500 } )
+		});
+			
+	});	  
+	  
+</script>
+<style>
+ul#menu {
+	margin:0;
+	padding:0;
+	width:180px;
+	border:1px solid #7B8F8A;
+	list-style:none;	
+	background-color:#BCC499;
+}
+
+ul#menu li {
+	margin:0;
+	padding:5px 0 5px 20px;
+	border-bottom:1px solid #7B8F8A;	
+	font-family:arial;
+	font-size:15px;
+	font-weight:700;
+	color:#F6EFDC;
+}
+
+ul#menu li:first-child {
+	border-top:none
+}
+
+/* padding-right is set 100px and white-space is used to make sure it won't break into two lines */
+ul#menu li a {
+	color:#F6EFDC;
+	text-decoration:none;	
+	padding-right:100px;
+	white-space:nowrap;
+}
+
+ul#menu li a {
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.even {
+	background-color:#92A68A
+}
+
+/* IE Hack */
+*html ul#menu li a {
+	padding-right:60px !important
+}
+
+</style>
+</head>
+
+<body>
+
+   <ul id="menu">
+	<li><a href="#">About Us</a></li>
+	<li><a href="#">Contact Us</a></li>
+	<li><a href="#">Follow Me</a></li>
+	<li><a href="#">Downloads</a></li>
+	<li><a href="#">Portfolio</a></li>
+	<li><a href="#">Subscribe</a></li>
+   </ul>
+   
+</body>
+</html>
