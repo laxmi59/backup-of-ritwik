@@ -1,0 +1,411 @@
+<link rel="stylesheet" href="css/popupjquery.ui.all.css" type="text/css">
+<script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+<script type="text/javascript" src="js/jquery.bgiframe-2.1.2.js"></script>
+<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.position.js"></script>
+<script type="text/javascript" src="js/jquery.ui.resizable.js"></script>
+<script type="text/javascript" src="js/jquery.ui.dialog.js"></script>
+	
+<script type="text/javascript">
+	$(function() {
+		var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 365);
+		document.cookie = "newspopnew=2;path=/;expires="+exdate.toUTCString();
+		$("#dialog").dialog();
+		//document.getElementById("opacitypopup").style.display = 'none';
+        //document.getElementById("whitepaper").style.display = 'block';
+	});
+	function email(reg){
+		var e=reg.value;
+		var e1=/^(?:\w+\.?)*\w+@(?:\w+\.)+\w+$/;
+		if(e.match(e1))	{
+			return false;
+		}else{
+			alert("Invalid Email");
+			reg.focus();
+			return true;
+		}
+	}
+	function PopupNewshomeFunction1(reg){
+		if(email(reg.email1)){return false}
+		var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 365);
+		document.cookie = "newspop=1;expires="+exdate.toUTCString();
+		document.getElementById("opacitypopup").style.display = 'none';
+        document.getElementById("whitepaper").style.display = 'block';
+		reg.submit();
+	}
+	function PopupNewshomeFunction(reg){
+		if(email(reg.email)){return false}
+		var exdate=new Date();
+        exdate.setDate(exdate.getDate() + 365);
+		document.cookie = "newspop=1;expires="+exdate.toUTCString();
+		document.getElementById("opacitypopup").style.display = 'none';
+        document.getElementById("whitepaper").style.display = 'block';
+		reg.submit();
+	}
+	function PopupNewshomeFunction2(reg){
+		if(email(document.getElementById("emailsingle"))){return false}
+		document.frmsingle.submit();
+	}
+	</script>
+    
+    <!--input-txt-->
+	<script type="text/javascript">
+		function hiddenText(iid,value,classname)
+		{
+			 document.getElementById(iid).value=value;
+			  
+		}
+		
+		function displayText(iid,value,classname)
+		{
+			if(document.getElementById(iid).value =="")
+			{
+				  document.getElementById(iid).value=value;
+			}
+		}	
+	</script>
+<style type="text/css">
+.opacitypopup{position:relative; z-index:99;}
+.opacitypopup .main{position:absolute; height:3000px; width:100%; background:url("images/transparent.png") repeat left top  !important;}
+.ui-dialog .ui-dialog-titlebar-close {display:block !important;}
+</style>
+<body>
+<div class="opacitypopup" id="opacitypopup"><div class="main"></div></div>
+GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+	
+	
+	GENERALAP-11 - Navbar Updates
+Made Changes and fixed the all issues.
+
+Modified Files:
+	/public_html/directory/wp-content/themes/directorypress/themes/directorypress-AP-DirectoryPress
+	/public_html/include/functions.php
+	/public_html/blog/wp-content/themes/ap/header.php 
+	/public_html/blog/wp-content/themes/ap/category.php 
+
+CPAOFFERS-1 - Create dev2.cpaoffers.com site on GoDaddy Server
+
+Modified Files in DEV2:
+	/public_html/wp-content/plugins/llg-category-posts/list_cat_posts.php
+Modified Files in LIVE:
+	/wp-content/plugins/llg-category-posts/list_cat_posts.php
+	
+TECHGEN-2 - 'Contact Program' tab on both CAP and PAP affiliate program landing pages
+
+Modified Files in PAP
+	/home/wjolly/pokeraffiliateprograms/components/com_programs/controller.php
+	/components/com_program/models/item.php
+
+<div class="ui-dialog-content ui-widget-content" id="dialog" style="width: auto; min-height: 116.633px; height: auto;">
+<div class="pop-left"><img src="images/popup-left.jpg" alt="" /></div>
+<div class="pop-right">  
+<h2>Enter Your Email Address And We'll Send Your Free eBook Right Now!</h2>
+<form action="" onSubmit="return PopupNewshomeFunction1(this)" name="frm1" method="post">
+<div class="rt-form"><input type="text" class="textfill" onBlur="displayText(this.id,'Your Email Address...','displaytext')" onFocus="hiddenText(this.id,'','normaltext')" value="Your Email Address..." id="email1" name="Your Email Address...">
+<input type="hidden" value="popup" name="subtype">
+<div class="submit"><input type="image" src="images/get-instant-btn.png"></div></div>
+</form>
+<div class="privacy-here">We hate spam as much as you do. <br> 
+Please review  our Privacy Policy Here.</div>
+</div>
+</div>

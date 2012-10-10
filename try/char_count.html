@@ -1,0 +1,15 @@
+<script type="text/javascript">
+function textCounter(field,cntfield,maxlimit) {
+    if (field.value.length > maxlimit) // if too long...trim it!
+        field.value = field.value.substring(0, maxlimit);
+        // otherwise, update 'characters left' counter
+    else
+        cntfield.value = maxlimit - field.value.length;
+}
+</script>
+<form name="addlisting" method="post" action="" id="addlisting">
+<textarea name="remarks_for_client" id="remarks_for_client" style="width:705px" onKeyDown="textCounter(document.addlisting.remarks_for_client,document.addlisting.remLen1,230)"
+onKeyUp="textCounter(document.addlisting.remarks_for_client,document.addlisting.remLen1,230)"></textarea>
+<input readonly type="text" name="remLen1" size="3" maxlength="3" value="230">
+characters left
+</form>

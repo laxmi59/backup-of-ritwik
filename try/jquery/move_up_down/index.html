@@ -1,0 +1,248 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+  <title>bsmSelect examples</title>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <link rel="stylesheet" type="text/css" href="index_files/jquery.css">
+  <link rel="stylesheet" type="text/css" href="index_files/example.css">
+  <link href="index_files/jquery-ui.css" rel="stylesheet" type="text/css">
+  
+  <style type="text/css">
+    form {
+      width: 400px;
+      position: relative;
+    }
+
+    #changes3 {
+      position: absolute;
+      width: 200px;
+      left: 430px;
+      background: #fff;
+    }
+  </style>
+
+  <script type="text/javascript" src="index_files/jquery.js"></script>
+  <script type="text/javascript" src="index_files/jquery-ui.js"></script>
+  <script type="text/javascript" src="index_files/jquery_004.js"></script>
+  <script type="text/javascript" src="index_files/jquery_002.js"></script>
+  <script type="text/javascript" src="index_files/jquery_003.js"></script>
+
+  <script type="text/javascript">//<![CDATA[
+
+    jQuery(function($) {
+
+      // Initialize options
+      var cities = ['Atlanta', 'Baltimore', 'Boston', 'BuenosAires', 'Calgary', 'Chicago', 'Denver',
+        'Dubai', 'Frankfurt', 'HongKong', 'Honolulu', 'Houston', 'KualaLumpur', 'London', 'LosAngeles', 
+        'Melbourne', 'MexicoCity', 'Miami', 'Minneapolis', 'Montreal', 'NewYorkCity', 'Paris', 'Philadelphia',
+        'Rotterdam', 'SanDiego', 'SanFrancisco', 'SaoPaulo', 'Seattle', 'Seoul', 'Shanghai', 'Singapore', 'Sydney',
+        'Tokyo', 'Toronto', 'Vancouver'];
+
+      $.each(cities, function(index, city)
+      {
+        $(".sminit").each(function() {
+          $(this).append($("<option>").html(city));
+        });
+      });
+
+      $("option:nth-child(7n)").attr('selected', 'selected');
+
+      // Example 1
+      $("#cities1").bsmSelect({
+        addItemTarget: 'bottom',
+        animate: true,
+        highlight: true,
+        plugins: [
+          $.bsmSelect.plugins.sortable({ axis : 'y', opacity : 0.5 }, { listSortableClass : 'bsmListSortableCustom' }),
+          $.bsmSelect.plugins.compatibility()
+        ]
+      });
+
+      // Example 2
+      $("#cities2").bsmSelect({
+        animate: true,
+        highlight: true,
+        plugins: [$.bsmSelect.plugins.sortable(), $.bsmSelect.plugins.compatibility()]
+      });
+
+      $("#add_city_btn2").click(function() {
+
+        var city = $("#add_city2").val();
+
+        $("#cities2").append($("<option>", { text: city, selected: "selected"})).change();
+        $("#add_city2").val('');
+
+        return false;
+      });
+
+      // Example 3
+      $("#cities3").bsmSelect({
+        addItemTarget: 'top',
+        plugins: [$.bsmSelect.plugins.sortable()]
+      });
+
+      // track changes with our own event
+      $("#cities3").change(function(e, data) {
+
+        // add a little note at the top that said what was done
+        $("#changes3").prepend($("<li>").html(data.type + ": " + data.value));
+
+        // if it's a sort or an add, then give it a little color animation to highlight it
+        if(data.type != 'drop') {
+          data.item.animate({ 'backgroundColor': '#ffffcc' }, 20, 'linear', function() {
+            data.item.animate({ 'backgroundColor': '#dddddd' }, 500);
+          });
+        }
+      });
+
+      // Example 4
+      $("#cities4").bsmSelect({
+        addItemTarget: 'bottom',
+        plugins: [$.bsmSelect.plugins.sortable()]
+      }).after($("<a href='#'>Select All</a>").click(function() {
+        $("#cities4").children().attr("selected", "selected").end().change();
+        return false;
+      }));
+
+      // Example 5
+      $("#cities5").bsmSelect({
+        showEffect: function($el){ $el.fadeIn(); },
+        hideEffect: function($el){ $el.fadeOut(function(){ $(this).remove();}); },
+        plugins: [$.bsmSelect.plugins.sortable()],
+        title: 'Pick some cities',
+        highlight: 'highlight',
+        removeLabel: '<strong>X</strong>',
+        containerClass: 'bsmContainer',                // Class for container that wraps this widget
+        listClass: 'bsmList-custom',                   // Class for the list ($ol)
+        listItemClass: 'bsmListItem-custom',           // Class for the <li> list items
+        listItemLabelClass: 'bsmListItemLabel-custom', // Class for the label text that appears in list items
+        removeClass: 'bsmListItemRemove-custom',       // Class given to the "remove" link
+        extractLabel: function($o) {return $o.parents('optgroup').attr('label') + "&nbsp;>&nbsp;" + $o.html();}
+      });
+
+    });
+
+  //]]></script>
+
+<script charset="utf-8" id="injection_graph_func" src="index_files/injection_graph_func.js"></script></head><body>
+  <div class="warning">
+    <p>The included version of jQuery UI makes ie6 stop working.</p>
+    <p>Try a <a href="http://www.suumit.com/projects/bsmSelect/examples/index_simple.html">simpler example</a> with ie6.</p>
+  </div>
+
+  <h1>Example 1: Typical Usage</h1>
+
+  <form action="./example_results.php" method="post">
+
+    <label for="bsmSelectbsmContainer0">What are your favorite cities?</label>
+    <div id="bsmContainer0" class="bsmContainer"><select id="bsmSelectbsmContainer0" name="bsmSelectbsmContainer0" class="bsmSelect"><option selected="selected" value="">Click to Select a City</option><option value="Amsterdam">Amsterdam</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Boston">Boston</option><option value="BuenosAires">BuenosAires</option><option value="Calgary">Calgary</option><option disabled="disabled" class="bsmOptionDisabled" value="Chicago">Chicago</option><option value="Denver">Denver</option><option value="Dubai">Dubai</option><option value="Frankfurt">Frankfurt</option><option value="HongKong">HongKong</option><option value="Honolulu">Honolulu</option><option value="Houston">Houston</option><option disabled="disabled" class="bsmOptionDisabled" value="KualaLumpur">KualaLumpur</option><option value="London">London</option><option value="LosAngeles">LosAngeles</option><option value="Melbourne">Melbourne</option><option value="MexicoCity">MexicoCity</option><option value="Miami">Miami</option><option value="Minneapolis">Minneapolis</option><option disabled="disabled" class="bsmOptionDisabled" value="Montreal">Montreal</option><option value="NewYorkCity">NewYorkCity</option><option value="Paris">Paris</option><option value="Philadelphia">Philadelphia</option><option value="Rotterdam">Rotterdam</option><option value="SanDiego">SanDiego</option><option value="SanFrancisco">SanFrancisco</option><option disabled="disabled" class="bsmOptionDisabled" value="SaoPaulo">SaoPaulo</option><option value="Seattle">Seattle</option><option value="Seoul">Seoul</option><option value="Shanghai">Shanghai</option><option value="Singapore">Singapore</option><option value="Sydney">Sydney</option><option value="Tokyo">Tokyo</option><option disabled="disabled" class="bsmOptionDisabled" value="Toronto">Toronto</option><option value="Vancouver">Vancouver</option></select><ol class="bsmList bsmListSortableCustom ui-sortable" id="bsmListbsmContainer0"><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Chicago</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">KualaLumpur</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Montreal</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">SaoPaulo</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Toronto</span><a class="bsmListItemRemove" href="#">remove</a></li></ol><select style="display: none;" id="cities1" multiple="multiple" name="cities[]" title="Click to Select a City" class="sminit">
+      <option>Amsterdam</option>
+    <option>Atlanta</option><option>Baltimore</option><option>Boston</option><option>BuenosAires</option><option>Calgary</option><option selected="selected">Chicago</option><option>Denver</option><option>Dubai</option><option>Frankfurt</option><option>HongKong</option><option>Honolulu</option><option>Houston</option><option selected="selected">KualaLumpur</option><option>London</option><option>LosAngeles</option><option>Melbourne</option><option>MexicoCity</option><option>Miami</option><option>Minneapolis</option><option selected="selected">Montreal</option><option>NewYorkCity</option><option>Paris</option><option>Philadelphia</option><option>Rotterdam</option><option>SanDiego</option><option>SanFrancisco</option><option selected="selected">SaoPaulo</option><option>Seattle</option><option>Seoul</option><option>Shanghai</option><option>Singapore</option><option>Sydney</option><option>Tokyo</option><option selected="selected">Toronto</option><option>Vancouver</option></select></div>
+    <p><input name="submit" value="submit" type="submit"></p>
+  </form>
+
+  <h1>Example 2: Modifying the select from jQuery</h1>
+
+  <h3>
+  This example demonstrates how you can modify the contents of the select, and how you should
+  trigger a change() event on the select after you have modified it.
+  </h3>
+
+  <form action="./example_results.php" method="post">
+
+    <label for="bsmSelectbsmContainer1">What are your favorite cities?</label>
+    <div id="bsmContainer1" class="bsmContainer"><select id="bsmSelectbsmContainer1" name="bsmSelectbsmContainer1" class="bsmSelect"><option selected="selected" value="">Please Select</option><option value="Amsterdam">Amsterdam</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Boston">Boston</option><option value="BuenosAires">BuenosAires</option><option value="Calgary">Calgary</option><option disabled="disabled" class="bsmOptionDisabled" value="Chicago">Chicago</option><option value="Denver">Denver</option><option value="Dubai">Dubai</option><option value="Frankfurt">Frankfurt</option><option value="HongKong">HongKong</option><option value="Honolulu">Honolulu</option><option value="Houston">Houston</option><option disabled="disabled" class="bsmOptionDisabled" value="KualaLumpur">KualaLumpur</option><option value="London">London</option><option value="LosAngeles">LosAngeles</option><option value="Melbourne">Melbourne</option><option value="MexicoCity">MexicoCity</option><option value="Miami">Miami</option><option value="Minneapolis">Minneapolis</option><option disabled="disabled" class="bsmOptionDisabled" value="Montreal">Montreal</option><option value="NewYorkCity">NewYorkCity</option><option value="Paris">Paris</option><option value="Philadelphia">Philadelphia</option><option value="Rotterdam">Rotterdam</option><option value="SanDiego">SanDiego</option><option value="SanFrancisco">SanFrancisco</option><option disabled="disabled" class="bsmOptionDisabled" value="SaoPaulo">SaoPaulo</option><option value="Seattle">Seattle</option><option value="Seoul">Seoul</option><option value="Shanghai">Shanghai</option><option value="Singapore">Singapore</option><option value="Sydney">Sydney</option><option value="Tokyo">Tokyo</option><option disabled="disabled" class="bsmOptionDisabled" value="Toronto">Toronto</option><option value="Vancouver">Vancouver</option></select><ol class="bsmList bsmListSortable ui-sortable" id="bsmListbsmContainer1"><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Chicago</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">KualaLumpur</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Montreal</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">SaoPaulo</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Toronto</span><a class="bsmListItemRemove" href="#">remove</a></li></ol><select style="display: none;" id="cities2" multiple="multiple" name="cities[]" title="Please Select" class="sminit">
+      <option>Amsterdam</option>
+    <option>Atlanta</option><option>Baltimore</option><option>Boston</option><option>BuenosAires</option><option>Calgary</option><option selected="selected">Chicago</option><option>Denver</option><option>Dubai</option><option>Frankfurt</option><option>HongKong</option><option>Honolulu</option><option>Houston</option><option selected="selected">KualaLumpur</option><option>London</option><option>LosAngeles</option><option>Melbourne</option><option>MexicoCity</option><option>Miami</option><option>Minneapolis</option><option selected="selected">Montreal</option><option>NewYorkCity</option><option>Paris</option><option>Philadelphia</option><option>Rotterdam</option><option>SanDiego</option><option>SanFrancisco</option><option selected="selected">SaoPaulo</option><option>Seattle</option><option>Seoul</option><option>Shanghai</option><option>Singapore</option><option>Sydney</option><option>Tokyo</option><option selected="selected">Toronto</option><option>Vancouver</option></select></div>
+
+    <p><em>You may click and drag cities to order of preference.</em></p>
+    <p><input name="submit" value="submit" type="submit"></p>
+  </form>
+
+  <p>
+    <label for="add_city2">add a city?</label>
+    <input id="add_city2" type="text">
+    <button type="button" id="add_city_btn2">add</button>
+  </p>
+
+  <h1>Example 3: Monitoring Changes to the Select</h1>
+
+  <h3>
+  This example demonstrates how you can catch bsmSelect events by attaching a change event to the original select.
+  In this rough example, we setup our change event to highlight manipulated items with a yellow flash of color.
+  We also record a history of changes in the right column. View the source of this page for details.
+  </h3>
+
+  <form action="./example_results.php" method="post">
+
+    <ul id="changes3">
+      <li style="display: none;">W3C conformance</li>
+    </ul>
+
+    <label for="bsmSelectbsmContainer2">What are your favorite cities?</label>
+    <div id="bsmContainer2" class="bsmContainer"><select id="bsmSelectbsmContainer2" name="bsmSelectbsmContainer2" class="bsmSelect"><option selected="selected" value="">Click to Select a City</option><option value="Amsterdam">Amsterdam</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Boston">Boston</option><option value="BuenosAires">BuenosAires</option><option value="Calgary">Calgary</option><option disabled="disabled" class="bsmOptionDisabled" value="Chicago">Chicago</option><option value="Denver">Denver</option><option value="Dubai">Dubai</option><option value="Frankfurt">Frankfurt</option><option value="HongKong">HongKong</option><option value="Honolulu">Honolulu</option><option value="Houston">Houston</option><option disabled="disabled" class="bsmOptionDisabled" value="KualaLumpur">KualaLumpur</option><option value="London">London</option><option value="LosAngeles">LosAngeles</option><option value="Melbourne">Melbourne</option><option value="MexicoCity">MexicoCity</option><option value="Miami">Miami</option><option value="Minneapolis">Minneapolis</option><option disabled="disabled" class="bsmOptionDisabled" value="Montreal">Montreal</option><option value="NewYorkCity">NewYorkCity</option><option value="Paris">Paris</option><option value="Philadelphia">Philadelphia</option><option value="Rotterdam">Rotterdam</option><option value="SanDiego">SanDiego</option><option value="SanFrancisco">SanFrancisco</option><option disabled="disabled" class="bsmOptionDisabled" value="SaoPaulo">SaoPaulo</option><option value="Seattle">Seattle</option><option value="Seoul">Seoul</option><option value="Shanghai">Shanghai</option><option value="Singapore">Singapore</option><option value="Sydney">Sydney</option><option value="Tokyo">Tokyo</option><option disabled="disabled" class="bsmOptionDisabled" value="Toronto">Toronto</option><option value="Vancouver">Vancouver</option></select><ol class="bsmList bsmListSortable ui-sortable" id="bsmListbsmContainer2"><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Chicago</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">KualaLumpur</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Montreal</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">SaoPaulo</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Toronto</span><a class="bsmListItemRemove" href="#">remove</a></li></ol><select style="display: none;" id="cities3" multiple="multiple" name="cities[]" title="Click to Select a City" class="sminit">
+      <option>Amsterdam</option>
+    <option>Atlanta</option><option>Baltimore</option><option>Boston</option><option>BuenosAires</option><option>Calgary</option><option selected="selected">Chicago</option><option>Denver</option><option>Dubai</option><option>Frankfurt</option><option>HongKong</option><option>Honolulu</option><option>Houston</option><option selected="selected">KualaLumpur</option><option>London</option><option>LosAngeles</option><option>Melbourne</option><option>MexicoCity</option><option>Miami</option><option>Minneapolis</option><option selected="selected">Montreal</option><option>NewYorkCity</option><option>Paris</option><option>Philadelphia</option><option>Rotterdam</option><option>SanDiego</option><option>SanFrancisco</option><option selected="selected">SaoPaulo</option><option>Seattle</option><option>Seoul</option><option>Shanghai</option><option>Singapore</option><option>Sydney</option><option>Tokyo</option><option selected="selected">Toronto</option><option>Vancouver</option></select></div>
+
+    <p><em>You may click and drag cities to order of preference.</em></p>
+    <p><input name="submit" value="submit" type="submit"></p>
+  </form>
+
+  <h1>Example 4: Simple Manipulation</h1>
+  <h3>In this example, we add a "select all" functionality.</h3>
+
+  <form action="./example_results.php" method="post">
+
+    <label for="bsmSelectbsmContainer3">What are your favorite cities?</label>
+    <div id="bsmContainer3" class="bsmContainer"><select id="bsmSelectbsmContainer3" name="bsmSelectbsmContainer3" class="bsmSelect"><option selected="selected" value="">Click to Select a City</option><option value="Amsterdam">Amsterdam</option><option value="Atlanta">Atlanta</option><option value="Baltimore">Baltimore</option><option value="Boston">Boston</option><option value="BuenosAires">BuenosAires</option><option value="Calgary">Calgary</option><option disabled="disabled" class="bsmOptionDisabled" value="Chicago">Chicago</option><option value="Denver">Denver</option><option value="Dubai">Dubai</option><option value="Frankfurt">Frankfurt</option><option value="HongKong">HongKong</option><option value="Honolulu">Honolulu</option><option value="Houston">Houston</option><option disabled="disabled" class="bsmOptionDisabled" value="KualaLumpur">KualaLumpur</option><option value="London">London</option><option value="LosAngeles">LosAngeles</option><option value="Melbourne">Melbourne</option><option value="MexicoCity">MexicoCity</option><option value="Miami">Miami</option><option value="Minneapolis">Minneapolis</option><option disabled="disabled" class="bsmOptionDisabled" value="Montreal">Montreal</option><option value="NewYorkCity">NewYorkCity</option><option value="Paris">Paris</option><option value="Philadelphia">Philadelphia</option><option value="Rotterdam">Rotterdam</option><option value="SanDiego">SanDiego</option><option value="SanFrancisco">SanFrancisco</option><option disabled="disabled" class="bsmOptionDisabled" value="SaoPaulo">SaoPaulo</option><option value="Seattle">Seattle</option><option value="Seoul">Seoul</option><option value="Shanghai">Shanghai</option><option value="Singapore">Singapore</option><option value="Sydney">Sydney</option><option value="Tokyo">Tokyo</option><option disabled="disabled" class="bsmOptionDisabled" value="Toronto">Toronto</option><option value="Vancouver">Vancouver</option></select><ol class="bsmList bsmListSortable ui-sortable" id="bsmListbsmContainer3"><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Chicago</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">KualaLumpur</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Montreal</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">SaoPaulo</span><a class="bsmListItemRemove" href="#">remove</a></li><li style="display: block;" class="bsmListItem"><span class="bsmListItemLabel">Toronto</span><a class="bsmListItemRemove" href="#">remove</a></li></ol><select style="display: none;" id="cities4" multiple="multiple" name="cities[]" title="Click to Select a City" class="sminit">
+      <option>Amsterdam</option>
+    <option>Atlanta</option><option>Baltimore</option><option>Boston</option><option>BuenosAires</option><option>Calgary</option><option selected="selected">Chicago</option><option>Denver</option><option>Dubai</option><option>Frankfurt</option><option>HongKong</option><option>Honolulu</option><option>Houston</option><option selected="selected">KualaLumpur</option><option>London</option><option>LosAngeles</option><option>Melbourne</option><option>MexicoCity</option><option>Miami</option><option>Minneapolis</option><option selected="selected">Montreal</option><option>NewYorkCity</option><option>Paris</option><option>Philadelphia</option><option>Rotterdam</option><option>SanDiego</option><option>SanFrancisco</option><option selected="selected">SaoPaulo</option><option>Seattle</option><option>Seoul</option><option>Shanghai</option><option>Singapore</option><option>Sydney</option><option>Tokyo</option><option selected="selected">Toronto</option><option>Vancouver</option></select><a href="#">Select All</a></div>
+    <p><input name="submit" value="submit" type="submit"></p>
+  </form>
+
+  <h1>Example 5: bsmSelect specific options</h1>
+  <h3>Execizing the features added over asmSelect</h3>
+  <ul>
+    <li>Custom effects</li>
+    <li>Option groups</li>
+    <li>Setting the title in the configuration</li>
+    <li>Customize the way list element labels get extracted</li>
+  </ul>
+
+  <form action="./example_results.php" method="post">
+
+    <label for="bsmSelectbsmContainer4">What are your favorite cities?</label>
+    <div id="bsmContainer4" class="bsmContainer"><select id="bsmSelectbsmContainer4" name="bsmSelectbsmContainer4" class="bsmSelect"><option selected="selected" value="">Pick some cities</option><optgroup label="Europe"><option value="Amsterdam">Amsterdam</option><option value="London">London</option><option disabled="disabled" class="bsmOptionDisabled" value="Paris">Paris</option></optgroup><optgroup label="US"><option value="Atlanta">Atlanta</option><option disabled="disabled" class="bsmOptionDisabled" value="Boston">Boston</option><option value="Chicago">Chicago</option><option value="Denver">Denver</option></optgroup><optgroup disabled="disabled" label="Elsewhere"><option value="Seoul">Seoul</option><option value="Shanghai">Shanghai</option><option value="Singapore">Singapore</option><option value="Sydney">Sydney</option></optgroup></select><ol class="bsmList-custom bsmListSortable ui-sortable" id="bsmList-custombsmContainer4"><li style="display: block;" class="bsmListItem-custom"><span class="bsmListItemLabel-custom">Europe&nbsp;&gt;&nbsp;Paris</span><a class="bsmListItemRemove-custom" href="#"><strong>X</strong></a></li><li style="display: block;" class="bsmListItem-custom"><span class="bsmListItemLabel-custom">US&nbsp;&gt;&nbsp;Boston</span><a class="bsmListItemRemove-custom" href="#"><strong>X</strong></a></li></ol><select style="display: none;" id="cities5" multiple="multiple" name="cities[]">
+      <optgroup label="Europe">
+        <option>Amsterdam</option>
+        <option>London</option>
+        <option selected="selected">Paris</option>
+      </optgroup>
+      <optgroup label="US">
+        <option>Atlanta</option>
+        <option selected="selected">Boston</option>
+        <option>Chicago</option>
+        <option>Denver</option>
+      </optgroup>
+      <optgroup label="Elsewhere" disabled="disabled">
+        <option>Seoul</option>
+        <option>Shanghai</option>
+        <option>Singapore</option>
+        <option>Sydney</option>
+      </optgroup>
+
+    </select></div>
+    <p style="clear: both;"><input name="submit" value="submit" type="submit"></p>
+  </form>
+
+  <ul id="footer">
+    <li><a href="http://github.com/vicb/bsmSelect">bsmSelect project on GitHub</a></li>
+    <li><a href="http://code.google.com/p/jquery-asmselect/">Original asmSelect homepage at Google Code</a></li>
+    <li><a href="http://www.ryancramer.com/journal/entries/select_multiple/">Article: Select multiple form fields - Finding a better solution</a></li>
+  </ul>
+
+  <p class="copyright">© 2008 by <a href="http://www.ryancramer.com/">Ryan Cramer</a></p>
+  <p class="copyright">© 2010 by <a href="http://github.com/vicb/">Victor Berchet</a></p>
+
+</body></html>

@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>
+Array JSON-JavaScript Example
+</title>
+<script language="javascript" >
+var students = { "Maths" : [     
+	{"Name" : "Amit", // First element
+	  "Marks" : 67,
+	 "age" : 23 },
+	{"Name"  : "Sandeep",  // Second element
+	 "Marks" : 65,
+	 "age" : 21 }
+	], 
+	"Science" :  [
+	{"Name"  : "Shaili",  // First Element
+	 "Marks" : 56,
+	 "age" : 27 },  
+	{
+	  "Name"  : "Santosh",  // Second Element
+	  "Marks" : 78,
+	 "age" : 41 }
+	] 
+} 
+// Printing all array values 
+var i=0
+document.writeln("<table border='1'><tr>");
+for(i=0;i<students.Maths.length;i++)
+{  
+  document.writeln("<td>");
+  document.writeln("<table border='0'  width=100 >");
+  document.writeln("<tr><td><B>Name</B></td><td width=50>"
+  +students.Maths[i].Name+"</td></tr>");
+  document.writeln("<tr><td><B>Marks</B></td><td width=50>"
+  +students.Maths[i].Marks +"</td></tr>");
+  document.writeln("<tr><td><B>Age</B></td><td width=50>"
+  +students.Maths[i].age +"</td></tr>");
+  document.writeln("</table>");
+  document.writeln("</td>");
+}
+for(i=0;i<students.Science.length;i++)
+{
+  document.writeln("<td>");
+  document.writeln("<table border='0'  width=100 >");
+  document.writeln("<tr><td><B>Name</B></td><td width=50>"
+   +students.Science[i].Name+"</td></tr>");
+  document.writeln("<tr><td><B>Marks</B></td><td width=50>"
+   +students.Science[i].Marks +"</td></tr>");
+  document.writeln("<tr><td><B>Age</B></td><td width=50>"
+   +students.Science[i].age +"</td></tr>");
+  document.writeln("</table>");
+  document.writeln("</td>");
+}
+document.writeln("</tr></table>");
+</script>
+</head>
+<body>
+Using Array of objects via JSON in JavaScript
+</body>
+</html>

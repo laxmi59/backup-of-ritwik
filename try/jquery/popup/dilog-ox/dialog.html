@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Dialog Visual Test : Default</title>
+	<link rel="stylesheet" href="css/popupjquery.ui.all.css" type="text/css">
+	<script type="text/javascript" src="js/jquery-1.5.1.js"></script>
+	<script type="text/javascript" src="js/jquery.bgiframe-2.1.2.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.core.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.widget.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.mouse.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.draggable.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.position.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.resizable.js"></script>
+	<script type="text/javascript" src="js/jquery.ui.dialog.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$("#dialog").dialog();
+	});
+	</script>
+</head>
+<body>
+
+<div class="ui-dialog-content ui-widget-content" id="dialog" style="width: auto; min-height: 116.633px; height: auto;">
+<span class="top-left"></span> <span class="top-right"></span><span class="bot-left"></span> <span class="bot-right"></span>
+<!--<span style="position:absolute; right:10px; top:15px; "><a href="javascript:closepopup();">close X</a></span>-->
+<h2><span>STOP!</span> Grab Your <span>FREE</span> Whitepaper</h2>
+<h2>"Secrets To Becoming A Money-Making Affiliate"</h2>
+<p>Produced and authored by the super affiliate who owns this site. These are the basics any succesful affiliate marketer needs to know, and for the first time ever, you don't have to pay for it. Just tell us where to send it below.</p>
+<h3>Your Email Address</h3>
+<form action="newsletter/" onsubmit="return PopupNewshomeFunction()" name="frm1" method="post">
+<input type="text" class="textfill" id="email1" value="" name="email1">
+<input type="hidden" value="popup" name="subtype">
+<div class="nothanks"><a href="javascript:close();">No Thanks</a></div>
+<div class="submit"><input type="image" src="images/get-my-white.png"></div>
+</form>
+</div>
+
+</body>
+</html>

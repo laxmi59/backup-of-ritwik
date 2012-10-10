@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title> Host Modified validation</title>
+<style type="text/css">
+</style>
+<script type="text/javascript">
+var first=new Array();
+var second=new Array();
+function slide()
+{
+	with(document.forms[0])
+	{
+		var k=0;
+		if(selectbox.options.length==0)
+		{
+			alert("Sorry......There are no items to move");
+			return false;
+		}
+		for (var i=0;i<selectbox.options.length ;i++ )
+		{
+			if(selectbox.options[i].selected)
+			{
+				k=k+1;
+				selectbox2.options[selectbox2.options.length]=new Option(selectbox.options[i].text, selectbox.options[i].value);
+				if(document.getElementById("chk").checked==true)
+					selectbox.options[i--]=null;
+	
+			}
+		}
+		if(k==0)
+		{
+			alert("Please select atleast one option to move");
+			return false;
+		}
+	
+	second.push(selectbox2.options);
+	
+	}
+}
+function slideback()
+{
+	with (document.forms[0])
+	{
+		var k=0;
+		if(selectbox2.options.length==0)
+		{
+			alert("Sorry......There are no items to move");
+			return false;
+		}
+		for(var i=0;i<selectbox2.options.length;i++)
+		{
+		
+			if(selectbox2.options[i].selected)
+			{
+				k=k+1;
+				selectbox.options[selectbox.options.length]=new Option(selectbox2.options[i].text,selectbox2.options[i].value);
+				if(document.getElementById("chk").checked==true)
+				selectbox2.options[i--]=null;
+		
+			}
+		}
+		
+		if(k==0)
+		{
+			alert("Please select atleast one option to move");
+			return false;
+		}
+		first.push(selectbox.options.text);
+		second.push(selectbox2.options);
+		
+	}
+}
+
+
+</script>
+</head>
+
+<body>
+<form name="f1">
+<table>
+<tr>
+	<th>Select the Item</th>
+	<th></th>
+	<th>Mapped items</th>
+</tr>
+<tr>
+	<td><select multiple name="selectbox" size="20" style="width:120px" onDblClick="slide()" >
+	<option value="Item1">Item1</style></option>
+	<option value="Item2">Item2</option>
+	<option value="Item3">Item3</option>
+	<option value="Item4">Item4</option>
+	<option value="Item5">Item5</option>
+	<option value="Item6">Item6</option>
+	<option value="Item7">Item7</option>
+	<option value="Item8">Item8</option>
+	<option value="Item9">Item9</option>
+	</select>
+	</td>
+	<td><input type="button" id="move" value=">>" onClick="slide()"><br>
+	<input type="button" id="moveback" value="<<" onClick="slideback()"></td>
+	<td><select multiple size="20" name="selectbox2" style="width:120px" onDblClick="slideback()">
+	</select></td>
+</tr>
+<tr><td><input type="checkbox" name="chk" id="chk">remove and add</td></tr>
+</table>
+</form>
+</body>
+</html>

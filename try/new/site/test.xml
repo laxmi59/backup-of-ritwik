@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.web.stormpost.skylist.com">
+   <soapenv:Header>
+      <authInfo xsi:type="soap:authentication" xmlns:soap="http://skylist.com/services/SoapRequestProcessor">
+         <!--You may enter the following 2 items in any order-->
+         <username xsi:type="xsd:string">soap@conglomeratenetwork.com</username>
+         <password xsi:type="xsd:string">Password2</password>
+      </authInfo>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ser:getRecipientByAddress soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <address xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">shekar@ritwik.com</address>
+      </ser:getRecipientByAddress>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,26 @@
+
+    
+    <html>
+    <script type="text/javascript">
+    function valid(){
+    var tests = document.getElementsByClassName('test');
+    for(i=0;i<tests.length;i++){
+    if (tests[i].value == ''){      
+	      alert("dont you know how enter values");
+	      tests[i].focus();
+	    break;
+
+    }
+    }
+      
+    }
+    </script>
+    <body>
+    <form action="#" onsubmit ="return valid();" >
+<input type="text" class="test" id="22"/>
+    <input type="text" class="test" id="23"/>
+    <input type="text" class="test" id="24" />
+    <input type="submit"/>
+    </form>
+    </body>
+    </html>

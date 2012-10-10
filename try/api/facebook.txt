@@ -1,0 +1,7 @@
+App Name:	test
+App URL:	http://localhost/rama/try/api/
+App ID:	150704848297066
+App Secret:	2322a9338842baba9f3e5da18464922f
+
+
+

@@ -1,0 +1,54 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/JavaScript">
+var first = getUrlVars()["page_id"];
+arr=new Array(2,18,24,28);
+$(document).ready(function(){
+$("#pageid1").addClass("active");
+	for(i=0;i<arr.length;i++){
+		if(arr[i]==first){
+			$("#pageid1").removeClass("active");
+			$("#pageid"+arr[i]).addClass("active");
+		}else{
+			$("#pageid"+arr[i]).removeClass("active");
+		}
+	}
+});
+function getUrlVars()
+{
+	var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+	for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+		vars[hash[0]] = hash[1];
+    }
+	return vars;
+}
+</script>
+<style>
+.menu_part{width:157px; margin:0px;  float:left;}
+.menu_par1t{width:157px; margin:0px; padding:25px 0 0 25px; float:left;}
+.menu{width:100%;}
+.menu ul{margin:0px; padding:0px; list-style:none;}
+.menu ul li{margin:0 0 20px 0px; padding:0px; list-style:none; display:inline; width:125px; height:40px; float:left; background:url(images/dotted-rpt.jpg) top left repeat-x;}
+.current_page { text-decoration:none; color:#FFFFFF; float:left; background-color:#fe48aa; }
+.menu ul li a{margin:0px; padding:10px 0px; color:#555555; font-size:13px; text-decoration:none; width:125px; text-align:center; font-weight:bold; float:left; }
+.menu ul li.current_page_item a{ text-decoration:none; color:#FFFFFF; float:left; background-color:#fe48aa; }
+.menu ul li a:hover{ text-decoration:none; color:#FFFFFF; float:left; background-color:#fe48aa; }
+.menu ul li a.active{ text-decoration:none; color:#FFFFFF; float:left; background-color:#fe48aa; }
+.rpt_bottom{background:url(images/dotted-rpt.jpg) bottom left repeat-x; width:125px; height:2px;}
+</style>
+<body>
+<div class="menu_part" style="padding-top:5px;">
+ <div class="menu">
+ <ul>
+	 <li><a id="pageid1" href="#">Home </a></li>
+	 <li><a id="pageid2" href="?page_id=2">About Us</a></li>
+	 <li><a id="pageid18" href="?page_id=18">Our Brands</a></li>
+	 <li><a id="pageid24" href="?page_id=24">News/Blog</a></li>
+	 <li><a id="pageid28" href="?page_id=28" style="line-height:13px;">Contact Us / Place an Order</a></li>
+ </ul>
+ </div>
+ </div>
+ 

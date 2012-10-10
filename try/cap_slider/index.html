@@ -1,0 +1,32 @@
+<script type="text/javascript" src="js/jquery_slider.js"></script>
+<script type="text/javascript" src="js/simplegallery.js"></script>
+<script type="text/javascript">
+var mygallery=new simpleGallery({
+	wrapperid: "simplegallery1", //ID of main gallery container,
+	dimensions: [634, 290], //width/height of gallery in pixels. Should reflect dimensions of the images exactly
+	imagearray: [
+			
+				["images/stuntisland-300x250.jpg", "# ", "_self", "<h2><a style='color:#0C3D61; text-decoration:none; font-size:26px; font-weight:bold;line-height:28px' href='#'>picture1</a></h2><p style='color: #333333; font-weight: bold; text-transform: uppercase; padding-bottom: 6px;margin-bottom:7px;border-bottom: 1px dotted;'>may 23rd</p><span style=' color: #333333;font-family: arial; font-size: 14px;line-height: 17px;'>picture1 picture1 picture1 picture1 picture1 picture1 </span>&nbsp;<span class='readmore' style='line-height: 17px;'><a href='#'><b>Read more</b></a></span>"],
+				["images/300x250_09-10_a870_BOGO.jpg", "picture2 ", "_self", "<h2><a style='color:#0C3D61; text-decoration:none; font-size:26px; font-weight:bold;line-height:28px' href='#'>picture2</a></h2><p style='color: #333333; font-weight: bold; text-transform: uppercase; padding-bottom: 6px;margin-bottom:7px;border-bottom: 1px dotted;'>may 23rd</p><span style=' color: #333333;font-family: arial; font-size: 14px;line-height: 17px;'>picture2 picture2 picture2 picture2 picture2</span>&nbsp;<span class='readmore' style='line-height: 17px;'><a href='#'><b>Read more</b></a></span>"],
+				
+				["images/ads-300x250.jpg", "#", "_self", "<h2><a style='color:#0C3D61; text-decoration:none; font-size:26px; font-weight:bold;line-height:28px' href='#'>picture3</a></h2><p style='color: #333333; font-weight: bold; text-transform: uppercase; padding-bottom: 6px;margin-bottom:7px;border-bottom: 1px dotted;'>may 23rd</p><span style=' color: #333333;font-family: arial; font-size: 14px;line-height: 17px;'>picture3 picture3 picture3 picture3 picture3</span>&nbsp;<span class='readmore' style='line-height: 17px;'><a href='#'><b>Read more</b></a></span>"],
+				
+				["images/prp300x250.gif", "#", "_self", "<h2><a style='color:#0C3D61; text-decoration:none; font-size:26px; font-weight:bold;line-height:28px' href='#'>picture4</a></h2><p style='color: #333333; font-weight: bold; text-transform: uppercase; padding-bottom: 6px;margin-bottom:7px;border-bottom: 1px dotted;'>may 23rd</p><span style=' color: #333333;font-family: arial; font-size: 14px;line-height: 17px;'>picture4 picture4 picture4 picture4 picture4</span>&nbsp;<span class='readmore' style='line-height: 17px;'><a href='#'><b>Read more</b></a></span>"],
+				
+				["images/Qstv_Contest300x250.gif", "#", "_self", "<h2><a style='color:#0C3D61; text-decoration:none; font-size:26px; font-weight:bold;line-height:28px' href='#'>picture5</a></h2><p style='color: #333333; font-weight: bold; text-transform: uppercase; padding-bottom: 6px;margin-bottom:7px;border-bottom: 1px dotted;'>may 23rd</p><span style=' color: #333333;font-family: arial; font-size: 14px;line-height: 17px;'>picture5 picture5 picture5 picture5 picture5</span>&nbsp;<span class='readmore' style='line-height: 17px;'><a href='#'><b>Read more</b></a></span>"]
+			
+	],
+	autoplay: [true, 5000, 5], //[auto_play_boolean, delay_btw_slide_millisec, cycles_before_stopping_int]
+	persist: false, //remember last viewed slide and recall within same session?
+	fadeduration: 500, //transition duration (milliseconds)
+	oninit:function(){ //event that fires when gallery has initialized/ ready to run
+	},
+	onslide:function(curslide, i){ //event that fires after each slide is shown
+	}
+})
+
+
+</script>
+<div id="simplegallery1">&nbsp;</div>   
+		
+   

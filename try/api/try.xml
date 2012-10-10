@@ -1,0 +1,53 @@
+<!--<soap:Envelope
+xmlns:soap="http://www.w3.org/2001/12/soap-envelope"
+soap:encodingStyle="http://www.w3.org/2001/12/soap-encoding">
+
+<soap:Body xmlns:m="http://www.example.org/stock">
+  <m:GetStockPrice>
+    <m:StockName>IBM</m:StockName>
+  </m:GetStockPrice>
+</soap:Body>
+
+</soap:Envelope>-->
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services.web.stormpost.skylist.com">
+   <soapenv:Header>
+      <authInfo xsi:type="soap:authentication" xmlns:soap="http://skylist.com/services/SoapRequestProcessor">
+         <!--You may enter the following 2 items in any order-->
+         <username xsi:type="xsd:string">?</username>
+         <password xsi:type="xsd:string">?</password>
+      </authInfo>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ser:createRecipient soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <recipient xsi:type="soap:Recipient" xmlns:soap="http://skylist.com/services/SoapRequestProcessor">
+            <!--You may enter the following 26 items in any order-->
+            <recipID xsi:type="xsd:int">?</recipID>
+            <address xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</address>
+            <externalID xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</externalID>
+            <protocol xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</protocol>
+            <status xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</status>
+            <comment xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</comment>
+            <importID xsi:type="xsd:int">?</importID>
+            <password xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</password>
+            <signupMethod xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</signupMethod>
+            <signupIP xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</signupIP>
+            <sourceSignupDate xsi:type="xsd:dateTime">?</sourceSignupDate>
+            <sourceDescription xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</sourceDescription>
+            <thirdPartySource xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</thirdPartySource>
+            <thirdPartySignupDate xsi:type="xsd:dateTime">?</thirdPartySignupDate>
+            <dateLastClicked xsi:type="xsd:dateTime">?</dateLastClicked>
+            <dateLastOpened xsi:type="xsd:dateTime">?</dateLastOpened>
+            <clickCount xsi:type="xsd:int">?</clickCount>
+            <openCount xsi:type="xsd:int">?</openCount>
+            <numBounces xsi:type="xsd:int">?</numBounces>
+            <blockCode xsi:type="soapenc:string" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">?</blockCode>
+            <dateJoined xsi:type="xsd:dateTime">?</dateJoined>
+            <dateBounce xsi:type="xsd:dateTime">?</dateBounce>
+            <dateHeld xsi:type="xsd:dateTime">?</dateHeld>
+            <dateUnsub xsi:type="xsd:dateTime">?</dateUnsub>
+            <dateOptout xsi:type="xsd:dateTime">?</dateOptout>
+            <demographics xsi:type="soap:ArrayOf_soapenc_string" soapenc:arrayType="soapenc:string[]" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+         </recipient>
+      </ser:createRecipient>
+   </soapenv:Body>
+</soapenv:Envelope>

@@ -1,0 +1,41 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$(".remove-another").hide();
+});
+
+function addFormField() {
+	var num = document.getElementById("tt").value;
+	$(".remove-another").show();
+	var num1 = Number(num)+Number(1);
+	$("#parent").append('<table id=parents'+Number(num1)+'><tr><td>Portal Name:'+Number(num1)+'</td><td><input type="text" class="testname" id="pname'+Number(num1)+'" name="pname'+Number(num1)+'" ></td></tr></table>');
+	$("#parent"+num).slideDown("normal");
+	num = (num - 1) + 2;
+	document.getElementById("tt").value = num;
+}
+function removeFormField() {
+	var id = document.getElementById("tt").value;
+	
+	$("#parents"+id).slideUp("normal", function() {
+   		//$("#parents"+id).empty();
+		$("#parents"+id).replaceWith("");
+		var num = Number(id)-Number(1);
+		document.getElementById("tt").value = num;
+	 });
+	if(document.getElementById("tt").value ==1){
+		$(".remove-another").hide();
+	}
+}
+</script>
+<form name="Registration_form" id="Registration_form" class="gr-br-bg-repeaty" method="post" >
+	<input type="hidden" id="tt" name="tt" value="1" />
+     <table>
+	 <tr>
+	 	<td>Portal Name:</td>
+		<td><input type="text" class="testname" id="pname1" name="pname1" ></td>
+		</tr>
+	</table>
+	<span id="parent">&nbsp;</span>
+	<a href="javascript:void(0)" onclick="addFormField();">Add another Portal</a>
+	<a href="javascript:void(0)"onclick="removeFormField();">Remove Portal</a>
+</form>

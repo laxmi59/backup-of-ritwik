@@ -1,0 +1,16 @@
+<iframe id="id_description_iframe" src ="hi.txt" width="100%" height="300">
+  <p>Your browser does not support iframes.</p>
+</iframe>
+<script>
+    function testing(){
+        var e = document.getElementById("id_description_iframe");
+        if(e != null) {
+            alert(e.contentWindow.document.body.innerText);
+        }
+    }
+</script>
+<input type="button" name="click" value="click" onclick="testing()"/>
+
+<p id="myP">Sample Text inside a <b>p</b> element</p>
+<button onclick="alert(myP.innerHTML);">InnerHTML</button>
+<button onclick="alert(myP.innerText);">InnerText</button>

@@ -1,0 +1,294 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#parent1").css("display","none");
+	$("#parent2").css("display","none");
+    $('#tt').val(Number(1));
+    $("#add_box").click(function(){
+		var num		= $('#tt').val();   
+		var num1=Number(num)+Number(1);
+		if (Number(num) < Number(3)){
+			//console.log('running addPerson')
+			var strToAdd = '<dl style=" background:#F2F7F9; margin:0 -10px; padding:10px 10px 0 10px; overflow:hidden; float:left;width:100%;"><dt>Portal Name - '+Number(num1)+':</dt><dd><input type="text" id="pname'+Number(num1)+'" class="testname" name="pname[]"></dd><dt>Portal URL - '+Number(num1)+':</dt><dd><input type="text"  id="purl'+Number(num1)+'" class="testurl" name="purl[]"></dd><dt>Portal Description - '+Number(num1)+':</dt><dd><textarea id="pdesc'+Number(num1)+'" class="testdesc" name="pdesc[]" ></textarea></dd></dl>';
+			//console.log(strToAdd);
+			if(Number(num) == Number(1)){
+				$("#parent1").append(strToAdd);
+				$("#parent1").slideDown("slow");
+			}else if(Number(num) == Number(2)){
+				$("#parent2").append(strToAdd);
+				$("#parent2").slideDown("slow"); //Slide Down Effect  
+			}
+			$("#tt").val(Number(num)+ Number(1));
+			num=''; 
+		}else{
+			alert("You cant Get More than 3");
+		}
+		
+    });            
+});
+</script>
+<script language=javascript>
+function Validation()
+{
+	var emailexp=/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+	var webUrl = /^(((ht|f){1}(tp:[/][/]){1})|((www.){1}))[-a-zA-Z0-9@:%_\+.~#?&//=]+$/;
+	function trimfun(stringToTrim) {
+		return stringToTrim.replace(/^\s+|\s+$/g,"");
+	}
+	var vname=trimfun(document.getElementById("name").value);
+	if(vname=="") {
+  		alert("Enter Name");
+		document.getElementById("name").value="";
+		document.getElementById("name").focus();
+		return false;
+	}
+	var vmail=trimfun(document.getElementById("email").value);
+	if(vmail=="") {
+  		alert("Enter Email Address");
+		document.getElementById("email").value="";
+		document.getElementById("email").focus();
+		return false;
+	}
+	if(vmail!="") {
+		if(emailexp.test(vmail)==0){
+  			alert("Invalid Email Address");
+			document.getElementById("email").focus();
+			return false;
+		}
+	}
+	var vuname=trimfun(document.getElementById("username").value);
+	if(vuname=="") {
+  		alert("Enter UserName");
+		document.getElementById("username").value="";
+		document.getElementById("username").focus();
+		return false;
+	}
+	//portal1
+	var portvname1=trimfun(document.getElementById("pname1").value);
+	if(portvname1=="") {
+  		alert("Enter Portal Name");
+		document.getElementById("pname1").value="";
+		document.getElementById("pname1").focus();
+		return false;
+	}
+	var portvmail1=trimfun(document.getElementById("purl1").value);
+	if(portvmail1=="") {
+  		alert("Enter Portal Web Url");
+		document.getElementById("purl1").value="";
+		document.getElementById("purl1").focus();
+		return false;
+	}
+	if(portvmail1!="") {
+		if(webUrl.test(portvmail1)==0){
+  			alert("Invalid Web Url");
+			document.getElementById("purl1").focus();
+			return false;
+		}
+	}
+	var portvdesc1=trimfun(document.getElementById("pdesc1").value);
+	if(portvdesc1=="") {
+  		alert("Enter Portal Description");
+		document.getElementById("pdesc1").value="";
+		document.getElementById("pdesc1").focus();
+		return false;
+	}
+	//portal2
+	var portvname2=trimfun(document.getElementById("pname2").value);
+	if(portvname2=="") {
+  		alert("Enter Portal Name");
+		document.getElementById("pname2").value="";
+		document.getElementById("pname2").focus();
+		return false;
+	}
+	var portvmail2=trimfun(document.getElementById("purl2").value);
+	if(portvmail2=="") {
+  		alert("Enter Portal Web Url");
+		document.getElementById("purl2").value="";
+		document.getElementById("purl2").focus();
+		return false;
+	}
+	if(portvmail2!="") {
+		if(webUrl.test(portvmail2)==0){
+  			alert("Invalid Web Url");
+			document.getElementById("purl2").focus();
+			return false;
+		}
+	}
+	var portvdesc2=trimfun(document.getElementById("pdesc2").value);
+	if(portvdesc2=="") {
+  		alert("Enter Portal Description");
+		document.getElementById("pdesc2").value="";
+		document.getElementById("pdesc2").focus();
+		return false;
+	}
+	//portal3
+	var portvname3=trimfun(document.getElementById("pname3").value);
+	if(portvname3=="") {
+  		alert("Enter Portal Name");
+		document.getElementById("pname3").value="";
+		document.getElementById("pname3").focus();
+		return false;
+	}
+	var portvmail3=trimfun(document.getElementById("purl3").value);
+	if(portvmail3=="") {
+  		alert("Enter Portal Web Url");
+		document.getElementById("purl3").value="";
+		document.getElementById("purl3").focus();
+		return false;
+	}
+	if(portvmail3!="") {
+		if(webUrl.test(portvmail3)==0){
+  			alert("Invalid Web Url");
+			document.getElementById("purl3").focus();
+			return false;
+		}
+	}
+	var portvdesc3=trimfun(document.getElementById("pdesc3").value);
+	if(portvdesc3=="") {
+  		alert("Enter Portal Description");
+		document.getElementById("pdesc3").value="";
+		document.getElementById("pdesc3").focus();
+		return false;
+	}
+	/*var testname = document.getElementsByName('pname[]');
+   	for(i=0;i<testname.length;i++){
+		var testnameval=trimfun(testname[i].value);
+    	if (testnameval == ''){      
+	      alert("Enter Portal Name ");
+		  testname[i].value=''; 
+		  testname[i].focus(); 
+		  return false;
+	    break;
+	    }
+    }
+	var testurl = document.getElementsByName('purl[]');
+   	for(i=0;i<testurl.length;i++){
+		var testurlval=trimfun(testurl[i].value);
+    	if (testurlval == ''){      
+	      alert("Portal URL");
+		  testurl[i].value=''; 
+		  testurl[i].focus(); 
+		  return false;  
+		  break;
+	    }else{
+			if(webUrl.test(testurlval)==0){
+  				alert("Invalid Portal URL");
+				testurl[i].focus();	
+				return false;
+			}
+		}
+    }
+	var testdesc = document.getElementsByName('pdesc[]');
+   	for(i=0;i<testdesc.length;i++){
+		var testdescval=trimfun(testdesc[i].value);
+    	if (testdescval == ''){      
+	      alert("Portal Description");
+		  testdesc[i].value='';
+	      testdesc[i].focus();
+		  return false;
+	    break;
+	    }
+    }*/
+	
+	
+	//alert(document.getElementsByName('pname[]'));
+	
+	/*var testname = document.getElementsByName('pname[]');
+	alert(testname);
+   	for(i=0;i<testname.length;i++){
+		var testnameval=trimfun(testname[i].value);
+    	if (testnameval == ''){      
+	      alert("Enter Portal Name ");
+		  testname[i].value='';
+	      testname[i].focus();
+		  return false;
+	    break;
+	    }
+    }
+	var testurl = document.getElementsByName('purl[]');
+   	for(i=0;i<testurl.length;i++){
+		var testurlval=trimfun(testurl[i].value);
+    	if (testurlval == ''){      
+	      alert("Portal URL");
+		  testurl[i].value='';
+	      testurl[i].focus();
+		  return false;
+	    break;
+	    }else{
+			if(webUrl.test(testurlval)==0){
+  			alert("Invalid Portal URL");
+			testurl[i].focus();
+			return false;
+		}
+		}
+    }
+	var testdesc = document.getElementsByName('pdesc[]');
+   	for(i=0;i<testdesc.length;i++){
+		var testdescval=trimfun(testdesc[i].value);
+    	if (testdescval == ''){      
+	      alert("Portal Description");
+		  testdesc[i].value='';
+	      testdesc[i].focus();
+		  return false;
+	    break;
+	    }
+    }*/
+   return true;
+ }
+
+</script>
+
+
+
+<form name="Registration_form" id="Registration_form" method="post" >
+     <div class="leftcont">
+        <div class="breadcrumbs" ><a href="/">Home</a>&gt; Submit a complaint</div>
+        <h1>Submit a Complaint</h1>
+         <div align="center" style="color:#FF0000; font-weight:bold"><?php if($_REQUEST['msg']==1) echo "Successfully Added";?></div>
+        <dl>
+       	  <dt class="w-502 mab20">&nbsp;</dt>
+          <dt>Name:</dt>
+          <dd>
+            <input type="text" class=" validate['required'] inputbox" id="name" name="name">
+          </dd>
+          <dt>Email Address:</dt>
+          <dd>
+            <input type="text" class=" validate['required'] inputbox" id="email" name="email">
+          </dd>
+		  <dt>Username:</dt>
+          <dd>
+            <input type="text" class=" validate['required'] inputbox" id="username" name="username">
+          </dd>
+          
+          <dt class="w-502 blue-font-c pat15">Submit up to 3 portals below</dt>
+       </dl>
+           <dl style="background:#f2f7f9; margin:0 -10px; padding:10px 10px 0 10px; overflow:hidden; float:left;width:100%;"> 
+           <dt>Portal Name:</dt>
+          <dd>
+            <input type="text" class="testname" id="pname1" name="pname[]">
+          </dd>
+          <dt>Portal URL:</dt>
+          <dd>
+            <input type="text" class="testurl" id="purl1" name="purl[]">
+          </dd>
+          <dt>Portal Description:</dt>
+          <dd>
+             <textarea id="pdesc1" name="pdesc[]" class="testdesc"></textarea>
+          </dd> 
+          </dl>
+		  <input type="hidden" id="tt" name="tt" />
+		 
+		  <dl style=" margin:0 -10px; padding:10px 10px 0 10px; overflow:hidden; float:left;width:100%;" id="parent1"><dt class="w-502 blue-font-c pat15">Portal 2</dt></dl>
+		  
+          <dl style=" margin:0 -10px; padding:10px 10px 0 10px; overflow:hidden; float:left;width:100%;" id="parent2"><dt class="w-502 blue-font-c pat15">Portal 3</dt></dl>
+		  <dl>
+           <dt class="add-another"><input style="background:none; border:none; color:#4888AD; cursor:pointer;" type="button" class="add-btn" id="add_box" value="Add another Portal" /></dt>
+            <dd class="submit-complaint-btn flr w-175">
+        	
+			<input type="button"  src="templates/cap/images/submit-complaint.jpg" name="submit" value="submit"  onclick="return Validation()"  />
+      </dd>
+           </dl>
+       
+      </div> 
+     
+</form>

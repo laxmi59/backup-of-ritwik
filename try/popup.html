@@ -1,0 +1,28 @@
+<script type="text/javascript">
+function hide(id){
+	
+	if(document.getElementById(id))
+    {
+	var e = document.getElementById(id);
+	e.style.display = 'none';
+	return false;
+    }
+}
+</script>
+
+<script type="text/javascript">
+ function showprogramloginform(bburl,overlay_id,programid)
+ {
+	var html = '<div class="trans-bg"><div class="pd-login-popup"><form action="/bb/login.php?do=login" method="post" name="LOGIN" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 1)"><div class="whiteblue-box"><div class="whiteblue-box-tl"></div> <div class="whiteblue-box-tr"></div><div class="whiteblue-box-bl"></div><div class="whiteblue-box-br"></div><div class="cont"><div class="header"><div class="lt"></div><div class="rt"><a onclick="hideOverlay(\'overlay\');return false;" href="#close" class="close"></a></div></div><dl class="pd-login"><dt>User Name </dt>  <dd><div class="input-med-top"></div><input type="text" name="vb_login_username" class="input-med-mid-bg" /><div class="input-med-bot"></div></dd><dt>Password<small>forgot password?</small> </dt><dd><div class="input-med-top"></div><input type="password" class="input-med-mid-bg" name="vb_login_password" /><div class="input-med-bot"></div></dd><dt>&nbsp; </dt><dd class="remember">Remember me on this computer <input type="checkbox"  /></dd></dl><div class="bottom"><div class="liteblue-box2 not-a-member"><div class="liteblue-box2-tl"></div><div class="liteblue-box2-tr"></div><div class="liteblue-box2-bl"></div><div class="liteblue-box2-br"></div>Not a Member? <a href="/bb/register.php">Register for Free now</a> </div><div class="submit"><input type="image" src="templates/cap/images/program-details/submit-btn2.png" /></div></div></div> </div><input type="hidden" name="redirect" value="index.php?option=com_portal&task=saveportal&Itemid=40" /><input type="hidden" name="s" value="" /><input type="hidden" name="do" value="login" /><input type="hidden" name="vb_login_md5password" /><input type="hidden" name="vb_login_md5password_utf" /></form></div></div>';
+	
+	document.getElementById(overlay_id).innerHTML = html;
+	document.getElementById(overlay_id).style.display = 'block'; 	
+ }
+ function hideOverlay(overlay_id) {
+	document.getElementById(overlay_id).style.display = 'none';
+}
+</script>
+<div style="display: none;" id="overlay">&nbsp;</div>
+<div id="fade" class="black_overlay" style="display: none;"></div>
+
+<a href="javascript:void(0);" onclick="return showprogramloginform('/bb','overlay','1');">login</a>

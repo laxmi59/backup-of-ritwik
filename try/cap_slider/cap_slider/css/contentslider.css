@@ -1,0 +1,106 @@
+/* CSS Document */
+.sliderwrapper{
+position: relative; /*leave as is*/
+overflow: hidden; /*leave as is*/
+/*border: 10px solid navy;
+border-bottom-width: 6px;*/
+width: 400px; /*width of featured content slider*/
+height: 250px;
+margin-top: 10px;
+}
+
+
+
+.sliderwrapper .contentdiv{
+visibility: hidden; /*leave as is*/
+position: absolute; /*leave as is*/
+left: 0;  /*leave as is*/
+top: 0;  /*leave as is*/
+padding: 5px;
+background: white;
+width: 400px; /*width of content DIVs within slider. Total width should equal slider's inner width (390+5+5=400) */
+height:250px;
+filter:progid:DXImageTransform.Microsoft.alpha(opacity=100);
+-moz-opacity: 1;
+opacity: 1;
+cursor:pointer;
+}
+.sliderwrapper .contentdiv .descdiv{
+margin-top:176px;
+cursor:auto;
+padding-right: 8px;
+}
+.pagination{
+width: 400px; /*Width of pagination DIV. Total width should equal slider's outer width (400+10+10=420)*/
+text-align: right;
+background-color: navy;
+padding: 5px 10px;
+}
+
+.pagination a{
+padding: 0 5px;
+text-decoration: none; 
+color: #00007D;
+background: white;
+}
+
+/*.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #FEE496;
+}
+#paginate-slider4 a img:hover, #paginate-slider4 a.selected img {
+    border: 2px solid red;
+}
+#paginate-slider4 a img {
+    border: 2px solid gray;
+    height: 60px;
+    margin-top: 5px;
+    width: 80px;
+}*/
+
+.s-title{color: #20739E;
+    display: block;
+    font-size: 16px;
+    padding: 0 0 4px;
+    text-decoration: none;}
+	
+.s-title a{color: #20739E; text-decoration:none; font-weight:bold;font-size: 14px;
+}	
+.s-title a:hover{color: #20739E; text-decoration:underline; font-weight:bold;font-size: 14px;
+}	
+#paginate-slider4{}
+#paginate-slider4 .paginate-list a{ background: none repeat scroll 0 0 #E9F3FC;
+    border-left: 1px solid #D0D1D2;
+    border-top: 1px solid #BFBFBF;
+    color: #333333;
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 11px;
+    height: 90px;
+    padding: 5px 4px;
+    width: 90px; text-decoration:none; font-weight:normal !important; line-height:12px;}
+#paginate-slider4 .paginate-list a img{ margin-bottom:3px;}
+
+.pagination a:hover, .pagination a.selected{
+color: #000;
+background-color: #FEE496;
+}
+#paginate-slider4 a:hover, #paginate-slider4 a.selected {
+background: none repeat scroll 0 0 #FFFFFF;
+    border-left: 1px solid #CCCCCC;
+    border-top: 0 none;
+    box-shadow: 2px 2px 3px #969696; -moz-box-shadow: 2px 2px 3px #969696;
+-webkit-box-shadow: 2px 2px 3px #969696;
+}
+#paginate-slider4 a:hover, #paginate-slider4 a.selected {zoom: 1;
+filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=3);}
+.s-arrows{clear: both;
+    overflow: hidden;
+    padding: 10px 5px 0;}
+.s-arrows a{ float:left; margin-left:5px;}
+.s-arrows a:hover{ background:none !important; border:0 none !important; box-shadow:none !important;}
+.s-arrows-rt{ float:right; width:86px;}	
+.s-num{ vertical-align:top; line-height:20px; float:left; margin-right:5px;}
+
+

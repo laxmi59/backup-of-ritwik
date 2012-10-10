@@ -1,0 +1,53 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="ddsmoothmenu.css">
+<script type="text/javascript" src="ddsmoothmenu.js"></script>
+<script type="text/javascript">
+ddsmoothmenu.init({
+	mainmenuid: "smoothmenu1", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+</script>
+</head>
+<body>
+<div style="background:url(nav-bg.png)">
+<div id="smoothcontainer">
+<div id="smoothmenu1" class="ddsmoothmenu">
+<ul>
+<li><a href="/">Home</a></li>
+<li><a href="/directory/">Affiliate Programs</a>
+  <ul>
+  <li><a href="/directory/">Affiliate Program Directory</a></li>
+  <li><a href="#">Affiliate Networks</a></li>
+  <li><a href="#">Finding a Niche</a></li>
+  </ul>
+</li>
+<li><a href="#">Getting Started</a>
+  <ul>
+  <li><a href="#">Introduction to Affiliate Marketing</a></li>
+  <li><a href="/blog/make-first-sales-affiliate-marketing">Your first $500</a></li>
+  <li><a href="#">Affiliate Marketing Glossary</a></li>
+  <li><a href="#">Free Website Setup</a></li>
+  </ul>
+</li>
+<li><a href="#">Lessons</a>
+	<ul>
+  <li><a href="#">The Basics</a></li>
+  <li><a href="#">Wordpress & Site Building</a></li>
+  <li><a href="#">SEO</a></li>
+  <li><a href="#">PPC</a></li>
+  <li><a href="#">E-mail Marketing</a></li>
+  <li><a href="#">Social Media </a></li>
+  </ul>
+</li>
+<li><a href="/blog/tag/affiliate-marketing-news">Affiliate Marketing News</a></li>
+<li><a href="#">Product Reviews</a></li>
+</ul>
+<br style="clear: left" />
+</div>
+
+</div>
+</div>
+</body>

@@ -1,0 +1,149 @@
+/*
+*****************
+*	GENERAL.CSS	*
+*****************
+*/
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #000000;
+	background: #FCFCFC;
+}
+
+.content {
+    text-align:center;
+    margin-left:15%;
+    margin-right:15%;
+}
+
+h2 {
+	font-family: Arial, Helvetica;
+}
+
+fieldset {
+	border: none;
+	width: 610px;
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	text-align: left;
+	padding-left: 10px; 
+	border: 1px solid #CCCCCC;
+	background: #ECECEC;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+fieldset > legend {
+	color: #000000;
+	font-weight: bold;
+	vertical-align: middle;
+	margin-left: -7px;
+	padding-left: 10px;
+	padding-right: 5px;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.required {
+	color: #cc0000;
+}
+
+input, textarea, select {
+	font-family: Helvetica, sans-serif;
+	font-size: 12px;
+	height: 22px; 
+}
+
+select {
+    width: 180px;
+}
+
+.text_long {
+	width: 180px;
+}
+
+.label {
+	font-weight: normal;
+	text-align: right;
+	vertical-align: top;
+	width: 250px;
+}
+
+textarea {
+	width: 300px;
+	height: 80px;
+}
+
+td {
+	font-family: Helvetica;
+	font-size: 13px;
+}
+
+.btn_table {
+	width: 620px;
+	margin-top: 20px;
+	margin-right: -8px;
+	padding-top:6px;
+}
+
+.form_table {
+	text-align:middle;
+	width:700px;
+}
+
+.block_title {
+	font-weight: bold;
+	font-family: Helvetica;
+	font-size: 13.2px;
+	vertical-align: middle;
+	margin-left: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-left: 6px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	width:620px;
+ 	border-bottom:#B0B0B0 thin groove; 
+	border-left:#B0B0B0 thin inset; 
+	background-color: #CCCCCC;
+	text-align: left;
+}
+
+.info_table {
+    font-weight: normal;
+    width: 620px;
+    margin-bottom: 10px;
+}
+
+.ext_info_table{
+	font-weight: normal;
+    width: 620px;
+    margin-top: -10px;
+	margin-bottom: 10px;
+}
+
+.someBtn button,
+.someBtn {
+	font-family: Helvetica;
+	font-size: 13px;
+	font-weight: bold;
+	color: #000000;
+	width: 91px;
+	height: 21px;
+	text-align: center;
+	background-color: #CCCCCC;
+	background-repeat: no-repeat;
+	display: inline;
+}
+
+#bid-ok button {
+	padding-left: 8px;
+}
+
+.someBtn span {
+	display: none;
+}

@@ -1,0 +1,29 @@
+
+/* -------------
+ * Selects
+ * ------------- */
+.jqTransformSelectWrapper {width: 151px !important;position:relative;height: 27px;background: url(../images/selectbox-bg.png) repeat-x left top;float:left;border: 1px solid #4A5E3E; font-family:Arial, Helvetica, sans-serif; font-size:13px;}
+
+.jqTransformSelectWrapper div span {font-size: 14px;color: #696967;float: none;position: absolute;white-space: nowrap;height: 31px;line-height: 15px;
+padding: 8px 0 0 10px;overflow: hidden;cursor:pointer;
+	/*border: 1px solid #CCCCCC;*/
+/*	border-right: none;*/
+}
+
+.jqTransformSelectWrapper.open .jqTransformSelectOpen {background-position: top center;}
+
+.jqTransformSelectWrapper  a.jqTransformSelectOpen {display: block;position: absolute;right: 0px;width: 31px;height: 27px;;
+background: url(../images/select_right.png) no-repeat bottom center;}
+
+.jqTransformSelectWrapper ul { width:150px !important; position: absolute;width: 43px;top: 28px;left: 0px;list-style: none;background-color: #fff;border: 1px solid #4a5e3e;
+display: none;margin: 0px;padding: 4px 0px;height: 350px;overflow: auto;overflow-y: auto;z-index: 9000;}
+.jqTransformSelectWrapper ul li{}
+.jqTransformSelectWrapper ul a {display: block;padding: 5px 10px;margin: 0px 4px;text-decoration: none;color: #333333;font-size: 12px;}
+
+.jqTransformSelectWrapper ul li a { border-bottom:1px solid #e7e7e7;}
+
+.jqTransformSelectWrapper ul a.selected {background: #d9e9cf;color: #333333;}
+
+.jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {background: #d9e9cf;color: #333333;}
+
+.jqTransformHidden {display: none;}

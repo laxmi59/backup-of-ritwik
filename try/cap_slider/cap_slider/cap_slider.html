@@ -1,0 +1,80 @@
+<link rel="stylesheet" type="text/css" href="css/contentslider.css">
+<script type="text/javascript" src="js/contentslider.js"></script>
+
+
+<div class="home-banner">
+<div id="slider4" class="sliderwrapper">
+	<div class="contentdiv" style="background: url(post_img/20084.jpg) no-repeat scroll left 10px transparent; display: none; z-index: 2; opacity: 1; visibility: visible;" onclick="javascript:window.location='http://www.google.com/'">
+	<div class="descdiv">
+				<div class="s-title"><a rel="" href="http://www.google.com/">
+				Betsson Acquires Nordic Gaming Group</a></div>
+				Betsson has acquired Nordic Gaming Group.			</div></div>
+	<div class="contentdiv" style="background: url(post_img/19953.jpg) no-repeat scroll left 10px transparent; display: block; z-index: 5; opacity: 1; visibility: visible;" onclick="javascript:window.location='http://www.google.com/'">
+	<div class="descdiv">
+				<div class="s-title"><a rel="" href="http://www.google.com/">
+				Overview and Developments in the Asian Market</a></div>
+				Get to know the best finest of the best of the Asian market, including affiliate programs and market conditions.			</div></div>
+	<div class="contentdiv" style="background: url(post_img/19964.jpg) no-repeat scroll left 10px transparent; display: none; z-index: 4; opacity: 1; visibility: visible;" onclick="javascript:window.location='http://www.google.com/'">
+	<div class="descdiv">
+				<div class="s-title"><a rel="" href="http://www.google.com/">
+				German SEO Tips for Casino Affiliates</a></div>
+				Here are some important German SEO tips for casino affiliates to pay attention to.			</div></div>
+	<div class="contentdiv" style="background: url(http://www.casinoaffiliateprograms.com/blog/wp-content/themes/capblog/post_img/19914.jpg) no-repeat scroll left 10px transparent; display: none; z-index: 1; opacity: 1; visibility: visible;" onclick="javascript:window.location='http://www.google.com/'">
+	<div class="descdiv">
+				<div class="s-title"><a rel="" href="http://www.google.com/">
+				Google Issues Message to 20,000 Webmasters</a></div>
+				If pesky redirects have been plaguing your sites, you may have been 
+hacked. Google has issues 20,000 messages to webmasters to let them 
+know.			</div></div>
+</div>
+<!-- For thumbs -->
+<div id="paginate-slider4" style="background:white; width:400px">
+	
+		<div class="paginate-list" style="width:80px; display:inline">
+		<a rel="1" href="http://www.google.com/" class="toc">
+			<img src="post_img/thumb/20084.jpg" height="33" width="88">
+			<span>Betsson Acquires Nordic Gaming Group</span>
+		</a> 
+	</div>
+		<div class="paginate-list" style="width:80px; display:inline">
+		<a rel="2" href="http://www.google.com/" class="toc selected">
+			<img src="post_img/thumb/19953.jpg" height="33" width="88">
+			<span>Overview and Developments in the Asian Market</span>
+		</a> 
+	</div>
+		<div class="paginate-list" style="width:80px; display:inline">
+		<a rel="3" href="http://www.google.com/" class="toc">
+			<img src="post_img/thumb/19964.jpg" height="33" width="88">
+			<span>German SEO Tips for Casino Affiliates</span>
+		</a> 
+	</div>
+		<div class="paginate-list" style="width:80px; display:inline">
+		<a rel="4" href="http://www.google.com/" class="toc">
+			<img src="post_img/thumb/19914.jpg" height="33" width="88">
+			<span>Google Issues Message to 20,000 Webmasters</span>
+		</a> 
+	</div>
+		<div class="s-arrows" align="right">
+		<div class="s-arrows-rt"><span id="status" class="s-num">2 of 4 </span>
+		<a class="prev" href="#"><img src="images//arrow-left.jpg"></a>
+		<a class="next" href="#"><img src="images//arrow-right.jpg"></a></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+featuredcontentslider.init({
+	id: "slider4",  //id of main slider DIV
+	contentsource: ["inline", ""],  //Valid values: ["inline", ""] or ["ajax", "path_to_file"]
+	//toc: "markup",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+	toc: "markup",  //Valid values: "#increment", "markup", ["label1", "label2", etc]
+	nextprev: ["Prev", "Next"],  //labels for "prev" and "next" links. Set to "" to hide.
+	revealtype: "mouseover", //Behavior of pagination links to reveal the slides: "click" or "mouseover"
+	enablefade: [false, 0.1],  //[true/false, fadedegree]
+	autorotate: [true, 4000],  //[true/false, pausetime]
+	onChange: function(previndex, curindex){  //event handler fired whenever script changes slide
+		//previndex holds index of last slide viewed b4 current (1=1st slide, 2nd=2nd etc)
+		//curindex holds index of currently shown slide (1=1st slide, 2nd=2nd etc)
+		document.getElementById('status').innerHTML = curindex+ " of 4 ";
+	}
+})
+</script>

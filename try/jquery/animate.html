@@ -1,0 +1,28 @@
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+<script type="text/JavaScript">
+function example_animate2(px) {
+	$('#example2').animate({
+		'marginLeft' : px
+	});
+}
+</script>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><div id="example1" style="border: 1px solid black; margin: 10px 0px; padding: 10px; background-color: rgb(238, 238, 238); width: 200px; text-align: center;">This is going to move</div></td>
+    <td><input type="button" value="Move Left" onClick="example_animate1('-=50px')" />
+<input type="button" value="Move Right" onClick="example_animate1('+=50px')" /></td>
+  </tr>
+  <tr>
+    <td><div id="example2" style="border: 1px solid black; margin: 10px 0px; padding: 10px; background-color: rgb(238, 238, 238); width: 200px; text-align: center;">This is going to move</div></td>
+	 <td><input type="button" value="Move Left" onClick="example_animate2('-=50px')" />
+<input type="button" value="Move Right" onClick="example_animate2('+=50px')" /></td>
+  </tr>
+  <tr>
+    <td><div id="example3" style="border: 1px solid black; margin: 10px 0px; padding: 10px; background-color: rgb(238, 238, 238); width: 200px; text-align: center;">This is going to move</div></td>
+	 <td><input type="button" value="Move Left" onClick="example_animate3('-=50px')" />
+<input type="button" value="Move Right" onClick="example_animate('+=50px')" /></td>
+  </tr>
+</table>
+
+
+
