@@ -1,0 +1,98 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.17/jquery-ui.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+jQuery(document).ready(function(){
+	jQuery(".addSlidingDiv").hide();
+    jQuery(".add_show_hide").show();
+ 
+    jQuery('.add_show_hide').click(function(){
+    	jQuery(".addSlidingDiv").slideToggle();
+    });
+	
+	
+	
+	$(function() {
+		$("#contentLeft ul").sortable({ opacity: 0.6, cursor: 'move', update: function() {
+			var order = $(this).sortable("serialize") + '&action=updateRecordsListings';
+			/*$.post("updateDB.php", order, function(theResponse){
+				$("#contentRight").html(theResponse);
+			});*/
+		}
+		});
+	});
+
+});
+</script> 
+<style>
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-top: 10px;
+}
+
+ul {
+	margin: 0;
+}
+
+#contentWrap {
+	width: 700px;
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+}
+
+#contentTop {
+	width: 600px;
+	padding: 10px;
+	margin-left: 30px;
+}
+
+#contentLeft {
+	float: left;
+	width: 400px;
+}
+
+#contentLeft li {
+	list-style: none;
+	margin: 0 0 4px 0;
+	padding: 10px;
+	background-color:#00CCCC;
+	border: #CCCCCC solid 1px;
+	color:#fff;
+}
+
+
+	
+
+#contentRight {
+	float: right;
+	width: 260px;
+	padding:10px;
+	background-color:#336600;
+	color:#FFFFFF;
+}
+
+</style>
+</p>
+<div id="contentLeft">
+<div>
+position1<br />
+position2<br />
+position3<br />
+position4<br />
+</div>
+<ul>
+	<li id="recordsArray_1">1. Once dropped, an Ajax query is activated</li>
+	<li id="recordsArray_2">2. Dragging changes the opacity of the item</li>
+	<li id="recordsArray_3">3. Returned array can be found at the right</li>
+	<li id="recordsArray_4">4. It is very very easy</li>
+</ul>
+<div>
+	<a href="javascript:void(0)" class="add_show_hide" >view</a><br />
+<a href="javascript:void(0)" class="add_show_hide" >view</a><br />
+<a href="javascript:void(0)" class="add_show_hide" >view</a><br />
+<a href="javascript:void(0)" class="add_show_hide" >view</a><br />
+</div>
+
+</div>
+<p>
