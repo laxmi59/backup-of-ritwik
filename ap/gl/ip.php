@@ -1,0 +1,53 @@
+<?php
+	error_reporting(E_ALL);
+	ini_set('display_errors', '1');
+	$ip = addslashes($_GET['ip']);  
+	
+	//$ip = "69.224.216.41"; //US
+	//$ip = "85.11.197.19"; //sweden
+	//$ip = "62.12.64.13"; //Cyprus
+	//$ip = "194.90.127.255"; //Israel
+	//$ip = "62.231.127.255"; //Romania
+	//$ip ="77.246.191.255"; //spain
+	$server 	= 	'localhost';
+	$username	=	'affiliateprogram';
+	$password	=	'damntheman4';
+	$db			=	'geolocation';
+	mysql_connect($server,$username,$password);
+	mysql_select_db($db);
+	if(validateIpAddress($ip)==FALSE) {
+		echo "Invalid IP Address";
+	} else {
+		$i = explode(".",$ip);
+		$ipnumber = $i[3]+($i[2]*256)+($i[1]*256*256)+($i[0]*256*256*256);
+		$query = "SELECT country FROM geo3 WHERE $ipnumber>=ip_start AND $ipnumber<=ip_end";
+		$results = mysql_query($query) or die(mysql_error());
+		if(mysql_num_rows($results)==1) {
+			$row = mysql_fetch_object($results);
+			echo $row->country;
+		} else {
+			$query = "INSERT INTO notfound (ip,dt) VALUES ('$ip',NOW())";
+			$results = mysql_query($query) or die(mysql_error());
+			echo "IP NOT FOUND";
+		}
+	}
+
+function validateIpAddress($ip_addr)
+{
+  //first of all the format of the ip address is matched
+  if(preg_match("/^(\d{1,3})\.(\d{1,3})\.(\d{1,3})\.(\d{1,3})$/",$ip_addr))
+  {
+    //now all the intger values are separated
+    $parts=explode(".",$ip_addr);
+    //now we need to check each part can range from 0-255
+    foreach($parts as $ip_parts)
+    {
+      if(intval($ip_parts)>255 || intval($ip_parts)<0)
+      return false; //if number is not within range of 0-255
+    }
+    return true;
+  }
+  else
+    return false; //if format of ip address doesn't matches
+}
+?>

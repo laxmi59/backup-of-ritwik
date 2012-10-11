@@ -1,0 +1,27 @@
+/*
+Theme Name: DirectoryPress
+Theme URI: http://www.directorypress.net
+Description: Wordpress Directory Theme Developed By <a href='http://www.markfail.com'>Mark Fail</a>.
+Version: 6.7
+Author: PremiumPress
+Author URI: http://www.premiumpress.com
+License: 
+License URI: http://www.premiumpress.com/terms/
+*/
+
+/* DEFAULT REQUIRED WORDPRESS STYLES */
+
+.wp-caption { }
+.wp-caption-text { }
+.sticky { }
+.gallery-caption { }
+.bypostauthor { }
+
+#wp-calendar {	width: 100%;}
+#wp-calendar caption {	color: #222;	font-size: 14px;	font-weight: bold;	padding-bottom: 4px;	text-align: left;}
+#wp-calendar thead {	font-size: 11px;}
+#wp-calendar thead th {}
+#wp-calendar tbody {	color: #aaa;}
+#wp-calendar tbody td {	background: #f5f5f5;	border: 1px solid #fff;	padding: 3px 0 2px;	text-align: center;}
+#wp-calendar tbody .pad {	background: none;}
+#wp-calendar tfoot #next {	text-align: right;}
