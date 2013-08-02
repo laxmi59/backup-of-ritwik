@@ -8,7 +8,7 @@ include "classobjects.php";
 ?>
 <? if($_GET['act']=='down1'){
 	$file1=$_GET['name'];
-	$desc=mysql_fetch_array(mysql_query("select * from cal_services where id=$_GET[id]"));
+	$desc=mysql_fetch_array(mysql_query("select * from cal_services where id='".mysql_real_escape_string($_GET['id'])."'"));
 	$show= "../admin/uploads/".$desc[$file1];
 
 	header('Content-type: application/pdf');
@@ -17,7 +17,7 @@ include "classobjects.php";
 }?>
 <? if($_GET['act']=='book_print'){
 	$file="print.doc";
-	$book_fet=mysql_fetch_array(mysql_query("select * from cal_booking where bid='$_GET[bid]'"));
+	$book_fet=mysql_fetch_array(mysql_query("select * from cal_booking where bid='".mysql_real_escape_string($_GET[bid])."'"));
 	$servicefinal=mysql_fetch_array(mysql_query("select * from cal_services where id='$book_fet[ser_id]'"));
 	$slot=mysql_fetch_array(mysql_query("select * from cal_slots where id='$book_fet[slot_id]'"));
 	$cust_fet=mysql_fetch_array(mysql_query("select * from cal_users where user_id='$book_fet[user_id]'"));
@@ -59,10 +59,10 @@ include "classobjects.php";
 	$file="appointments.doc";
 	
 	$query="select * from cal_slots";
-	if($_GET['cid']) $query .=" where company='$_GET[cid]' ";
-	if($_GET['siteid']) $query .=" and site='$_GET[siteid]' ";
-	if($_GET['sid']) $query .=" and service='$_GET[sid]' ";
-	if($_GET['dt']) $query .=" and date='$_GET[dt]' ";
+	if($_GET['cid']) $query .=" where company='".mysql_real_escape_string($_GET['cid'])."' ";
+	if($_GET['siteid']) $query .=" and site='".mysql_real_escape_string($_GET['siteid'])."' ";
+	if($_GET['sid']) $query .=" and service='".mysql_real_escape_string($_GET['sid'])."' ";
+	if($_GET['dt']) $query .=" and date='".mysql_real_escape_string($_GET['dt'])."' ";
 	//echo $query;
 	$query .=" order by sloot_time asc ";
 	//echo $query;
@@ -121,10 +121,10 @@ include "classobjects.php";
 	$file="appointments.doc";
 	
 	$query="select * from cal_slots";
-	if($_GET['cid']) $query .=" where company='$_GET[cid]' ";
-	if($_GET['siteid']) $query .=" and site='$_GET[siteid]' ";
-	if($_GET['sid']) $query .=" and service='$_GET[sid]' ";
-	if($_GET['dt']) $query .=" and date='$_GET[dt]' ";
+	if($_GET['cid']) $query .=" where company='".mysql_real_escape_string($_GET['cid'])."' ";
+	if($_GET['siteid']) $query .=" and site='".mysql_real_escape_string($_GET['siteid'])."' ";
+	if($_GET['sid']) $query .=" and service='".mysql_real_escape_string($_GET['sid'])."' ";
+	if($_GET['dt']) $query .=" and date='".mysql_real_escape_string($_GET['dt'])."' ";
 	//echo $query;
 	$query .=" order by sloot_time asc ";
 	//echo $query;
@@ -206,7 +206,7 @@ include "classobjects.php";
 		<td>Employee ID</td>
 		<td>Division</td>
 	</tr>";
-	 	$slt=mysql_query("select * from cal_booking where user_id='$_GET[id]' ORDER BY `sloot_time` ASC");
+	 	$slt=mysql_query("select * from cal_booking where user_id='".mysql_real_escape_string($_GET[id])."' ORDER BY `sloot_time` ASC");
 		$sltno=mysql_num_rows($slt);
 		if($sltno==''){
 	
@@ -243,7 +243,7 @@ include "classobjects.php";
 	readfile($file);
 }?>
 <? if($_GET['act']=='company_print_admin'){
-	$com_name=mysql_fetch_array(mysql_query("select * from cal_company where id='$_GET[id]'"));
+	$com_name=mysql_fetch_array(mysql_query("select * from cal_company where id='".mysql_real_escape_string($_GET[id])."'"));
 	$body ="<table width='90%' cellpadding='5' cellspacing='5'>
 	<tr>
 		<td width='100'>Service</td>
@@ -269,7 +269,7 @@ include "classobjects.php";
 	}else{
 		while($sltt=mysql_fetch_array($slt)){
 		
-		$sst=mysql_query("select * from cal_slots where id=$sltt[slot_id] and company='$_GET[id]'");
+		$sst=mysql_query("select * from cal_slots where id=$sltt[slot_id] and company='".mysql_real_escape_string($_GET[id])."'");
 		while($sst_fet=mysql_fetch_array($sst)){
 			$ccom=mysql_fetch_array(mysql_query("select * from cal_company where id='$sst_fet[company]'"));
 			$sst1=mysql_fetch_array(mysql_query("select * from cal_services where id='$sltt[ser_id]'"));
@@ -307,7 +307,7 @@ include "classobjects.php";
 	readfile($file);
 }?>
 <? if($_GET['act']=='site_print_admin'){
-	$com_name=mysql_fetch_array(mysql_query("select * from cal_site where id='$_GET[id]'"));
+	$com_name=mysql_fetch_array(mysql_query("select * from cal_site where id='".mysql_real_escape_string($_GET[id])."'"));
 	$filename=str_replace(" ","_",$com_name['name']);
 	$file="bookings_of_".$filename.".doc";
 	$body ="<table width='90%'>
@@ -333,7 +333,7 @@ include "classobjects.php";
 	}else{
 		while($sltt=mysql_fetch_array($slt)){
 		
-		$sst=mysql_query("select * from cal_slots where id=$sltt[slot_id] and site='$_GET[id]'");
+		$sst=mysql_query("select * from cal_slots where id=$sltt[slot_id] and site='".mysql_real_escape_string($_GET[id])."'");
 		while($sst_fet=mysql_fetch_array($sst)){
 			$sst1=mysql_fetch_array(mysql_query("select * from cal_services where id='$sltt[ser_id]'"));
 			$sst2=mysql_fetch_array(mysql_query("select * from cal_users where user_id='$sltt[user_id]'"));
@@ -367,7 +367,7 @@ include "classobjects.php";
 	readfile($file);
 }?>
 <? if($_GET['act']=='service_print_admin'){
-	$com_name=mysql_fetch_array(mysql_query("select * from cal_services where id='$_GET[id]'"));
+	$com_name=mysql_fetch_array(mysql_query("select * from cal_services where id='".mysql_real_escape_string($_GET[id])."'"));
 	$filename=str_replace(" ","_",$com_name['name']);
 	$file="bookings_of_".$filename.".doc";
 	$body ="<table width='90%'>
@@ -393,7 +393,7 @@ include "classobjects.php";
 	}else{
 		while($sltt=mysql_fetch_array($slt)){
 		
-		$sst1=mysql_query("select * from cal_slots where id=$sltt[slot_id] and service='$_GET[id]'");
+		$sst1=mysql_query("select * from cal_slots where id=$sltt[slot_id] and service='".mysql_real_escape_string($_GET[id])."'");
 		while($sst_fet=mysql_fetch_array($sst1)){
 			//$sst1=mysql_fetch_array(mysql_query("select * from cal_services where id='$sltt[ser_id]'"));
 			$sst2=mysql_fetch_array(mysql_query("select * from cal_users where user_id='$sltt[user_id]'"));
